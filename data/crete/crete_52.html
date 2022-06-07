@@ -1,0 +1,1666 @@
+<!DOCTYPE html>
+<html lang="el">
+ <head>
+  <script type="text/javascript">
+   window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.eu01.nr-data.net","errorBeacon":"bam.eu01.nr-data.net","licenseKey":"NRJS-317e383610bf84150ea","applicationID":"149429577","transactionName":"JhpeRQoXXw9SQRpPA0oFQl4IHUEXThxHUhUQGURCVxFdB1JL","queueTime":2,"applicationTime":507,"agent":""}
+  </script>
+  <script type="text/javascript">
+   (window.NREUM||(NREUM={})).init={privacy:{cookies_enabled:false},ajax:{deny_list:["bam.eu01.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={xpid:"VwYDWFJXChABUFhWBQgCUVM=",licenseKey:"NRJS-317e383610bf84150ea",applicationID:"149429577"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(t){try{s.console&&console.log(t)}catch(e){}}var i,o=t("ee"),a=t(27),s={};try{i=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,i.indexOf("dev")!==-1&&(s.dev=!0),i.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&o.on("internal-error",function(t){r(t.stack)}),s.dev&&o.on("fn-err",function(t,e,n){r(n.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,s){try{p?p-=1:i(s||new UncaughtException(t,e,n),!0)}catch(f){try{o("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function i(t,e){var n=e?null:c.now();o("err",[t,n])}var o=t("handle"),a=t(28),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError";if(!c.disabled){var p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(10),t(9),"addEventListener"in window&&t(6),c.xhrWrappable&&t(11),d=!0)}s.on("fn-start",function(t,e,n){d&&(p+=1)}),s.on("fn-err",function(t,e,n){d&&!n[l]&&(f(n,l,function(){return!0}),this.thrown=!0,i(n))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){o("ierr",[t,c.now(),!0])})}},{}],3:[function(t,e,n){var r=t("loader");r.disabled||(r.features.ins=!0)},{}],4:[function(t,e,n){function r(){var t=new PerformanceObserver(function(t,e){var n=t.getEntries();s(v,[n])});try{t.observe({entryTypes:["resource"]})}catch(e){}}function i(t){if(s(v,[window.performance.getEntriesByType(w)]),window.performance["c"+l])try{window.performance[h](m,i,!1)}catch(t){}else try{window.performance[h]("webkit"+m,i,!1)}catch(t){}}function o(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var a=t("ee"),s=t("handle"),c=t(10),f=t(9),u=t(5),d=t(19),l="learResourceTimings",p="addEventListener",h="removeEventListener",m="resourcetimingbufferfull",v="bstResource",w="resource",g="-start",y="-end",x="fn"+g,b="fn"+y,E="bstTimer",R="pushState",S=t("loader");if(!S.disabled){S.features.stn=!0,t(8),"addEventListener"in window&&t(6);var O=NREUM.o.EV;a.on(x,function(t,e){var n=t[0];n instanceof O&&(this.bstStart=S.now())}),a.on(b,function(t,e){var n=t[0];n instanceof O&&s("bst",[n,e,this.bstStart,S.now()])}),c.on(x,function(t,e,n){this.bstStart=S.now(),this.bstType=n}),c.on(b,function(t,e){s(E,[e,this.bstStart,S.now(),this.bstType])}),f.on(x,function(){this.bstStart=S.now()}),f.on(b,function(t,e){s(E,[e,this.bstStart,S.now(),"requestAnimationFrame"])}),a.on(R+g,function(t){this.time=S.now(),this.startPath=location.pathname+location.hash}),a.on(R+y,function(t){s("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),u()?(s(v,[window.performance.getEntriesByType("resource")]),r()):p in window.performance&&(window.performance["c"+l]?window.performance[p](m,i,d(!1)):window.performance[p]("webkit"+m,i,d(!1))),document[p]("scroll",o,d(!1)),document[p]("keypress",o,d(!1)),document[p]("click",o,d(!1))}}},{}],5:[function(t,e,n){e.exports=function(){return"PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver}},{}],6:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&i(e)}function i(t){s.inPlace(t,[u,d],"-",o)}function o(t,e){return t[1]}var a=t("ee").get("events"),s=t("wrap-function")(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(i(window),i(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1];if(null!==n&&("function"==typeof n||"object"==typeof n)){var r=c(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?s(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],7:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=o(arguments),e={};i.emit(n+"before-start",[t],e);var a;e[m]&&e[m].dt&&(a=e[m].dt);var s=r.apply(this,t);return i.emit(n+"start",[t,a],s),s.then(function(t){return i.emit(n+"end",[null,t],s),t},function(t){throw i.emit(n+"end",[t],s),t})})}var i=t("ee").get("fetch"),o=t(28),a=t(27);e.exports=i;var s=window,c="fetch-",f=c+"body-",u=["arrayBuffer","blob","json","text","formData"],d=s.Request,l=s.Response,p=s.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,e){r(d[h],e,f),r(l[h],e,f)}),r(s,"fetch",c),i.on(c+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),i.emit(c+"done",[null,e],n)}else i.emit(c+"done",[t],n)}))},{}],8:[function(t,e,n){var r=t("ee").get("history"),i=t("wrap-function")(r);e.exports=r;var o=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;o&&o.pushState&&o.replaceState&&(a=o),i.inPlace(a,["pushState","replaceState"],"-")},{}],9:[function(t,e,n){var r=t("ee").get("raf"),i=t("wrap-function")(r),o="equestAnimationFrame";e.exports=r,i.inPlace(window,["r"+o,"mozR"+o,"webkitR"+o,"msR"+o],"raf-"),r.on("raf-start",function(t){t[0]=i(t[0],"fn-")})},{}],10:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function i(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var o=t("ee").get("timer"),a=t("wrap-function")(o),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";e.exports=o,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),o.on(c+u,r),o.on(s+u,i)},{}],11:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",s)}function i(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function o(t){x.push(t),m&&(E?E.then(a):w?w(a):(R=-R,S.data=R))}function a(){for(var t=0;t<x.length;t++)r([],x[t]);x.length&&(x=[])}function s(t,e){return e}function c(t,e){for(var n in t)e[n]=t[n];return e}t(6);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=t(19),p=NREUM.o,h=p.XHR,m=p.MO,v=p.PR,w=p.SI,g="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],x=[];e.exports=u;var b=window.XMLHttpRequest=function(t){var e=new h(t);try{u.emit("new-xhr",[e],e),e.addEventListener(g,i,l(!1))}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(c(h,b),b.prototype=h.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,e){r(t,e),o(e)}),u.on("open-xhr-start",r),m){var E=v&&v.resolve();if(!w&&!v){var R=1,S=document.createTextNode(R);new m(a).observe(S,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===g||a()})},{}],12:[function(t,e,n){function r(t){if(!s(t))return null;var e=window.NREUM;if(!e.loader_config)return null;var n=(e.loader_config.accountID||"").toString()||null,r=(e.loader_config.agentID||"").toString()||null,f=(e.loader_config.trustKey||"").toString()||null;if(!n||!r)return null;var h=p.generateSpanId(),m=p.generateTraceId(),v=Date.now(),w={spanId:h,traceId:m,timestamp:v};return(t.sameOrigin||c(t)&&l())&&(w.traceContextParentHeader=i(h,m),w.traceContextStateHeader=o(h,v,n,r,f)),(t.sameOrigin&&!u()||!t.sameOrigin&&c(t)&&d())&&(w.newrelicHeader=a(h,m,v,n,r,f)),w}function i(t,e){return"00-"+e+"-"+t+"-01"}function o(t,e,n,r,i){var o=0,a="",s=1,c="",f="";return i+"@nr="+o+"-"+s+"-"+n+"-"+r+"-"+t+"-"+a+"-"+c+"-"+f+"-"+e}function a(t,e,n,r,i,o){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var s={v:[0,1],d:{ty:"Browser",ac:r,ap:i,id:t,tr:e,ti:n}};return o&&r!==o&&(s.d.tk=o),btoa(JSON.stringify(s))}function s(t){return f()&&c(t)}function c(t){var e=!1,n={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(n=NREUM.init.distributed_tracing),t.sameOrigin)e=!0;else if(n.allowed_origins instanceof Array)for(var r=0;r<n.allowed_origins.length;r++){var i=h(n.allowed_origins[r]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){e=!0;break}}return e}function f(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.enabled}function u(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.exclude_newrelic_header}function d(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&NREUM.init.distributed_tracing.cors_use_newrelic_header!==!1}function l(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.cors_use_tracecontext_headers}var p=t(24),h=t(14);e.exports={generateTracePayload:r,shouldGenerateTrace:s}},{}],13:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<l;r++)t.removeEventListener(d[r],this.listener,!1);return e.protocol&&"data"===e.protocol?void g("Ajax/DataUrl/Excluded"):void(e.aborted||(n.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):o(this,t),n.cbTime=this.cbTime,s("xhr",[e,n,this.startTime,this.endTime,"xhr"],this)))}}function i(t,e){var n=c(e),r=t.params;r.hostname=n.hostname,r.port=n.port,r.protocol=n.protocol,r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.parsedOrigin=n,t.sameOrigin=n.sameOrigin}function o(t,e){t.params.status=e.status;var n=v(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable&&!a.disabled){var s=t("handle"),c=t(14),f=t(12).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(20),m=t(18),v=t(15),w=t(19),g=t(21).recordSupportability,y=NREUM.o.REQ,x=window.XMLHttpRequest;a.features.xhr=!0,t(11),t(7),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,e.params=this.params||{},e.metrics=this.metrics||{},t.addEventListener("load",function(n){o(e,t)},w(!1)),h&&(h>34||h<10)||t.addEventListener("progress",function(t){e.lastSize=t.loaded},w(!1))}),u.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=f(this.parsedOrigin);if(n){var r=!1;n.newrelicHeader&&(e.setRequestHeader("newrelic",n.newrelicHeader),r=!0),n.traceContextParentHeader&&(e.setRequestHeader("traceparent",n.traceContextParentHeader),n.traceContextStateHeader&&e.setRequestHeader("tracestate",n.traceContextStateHeader),r=!0),r&&(this.dt=n)}}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],i=this;if(n&&r){var o=m(r);o&&(n.txSize=o)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||i.loadCaptureCalled||(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var s=0;s<l;s++)e.addEventListener(d[s],this.listener,w(!1))}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("xhr-resolved",function(){this.endTime=a.now()}),u.on("addEventListener-end",function(t,e){e instanceof x&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof x&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof x&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)}),u.on("fetch-before-start",function(t){function e(t,e){var n=!1;return e.newrelicHeader&&(t.set("newrelic",e.newrelicHeader),n=!0),e.traceContextParentHeader&&(t.set("traceparent",e.traceContextParentHeader),e.traceContextStateHeader&&t.set("tracestate",e.traceContextStateHeader),n=!0),n}var n,r=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url?n=t[0].url:window.URL&&t[0]&&t[0]instanceof URL&&(n=t[0].href),n&&(this.parsedOrigin=c(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var i=f(this.parsedOrigin);if(i&&(i.newrelicHeader||i.traceContextParentHeader))if("string"==typeof t[0]||window.URL&&t[0]&&t[0]instanceof URL){var o={};for(var a in r)o[a]=r[a];o.headers=new Headers(r.headers||{}),e(o.headers,i)&&(this.dt=i),t.length>1?t[1]=o:t.push(o)}else t[0]&&t[0].headers&&e(t[0].headers,i)&&(this.dt=i)}),u.on("fetch-start",function(t,e){this.params={},this.metrics={},this.startTime=a.now(),this.dt=e,t.length>=1&&(this.target=t[0]),t.length>=2&&(this.opts=t[1]);var n,r=this.opts||{},o=this.target;if("string"==typeof o?n=o:"object"==typeof o&&o instanceof y?n=o.url:window.URL&&"object"==typeof o&&o instanceof URL&&(n=o.href),i(this,n),"data"!==this.params.protocol){var s=(""+(o&&o instanceof y&&o.method||r.method||"GET")).toUpperCase();this.params.method=s,this.txSize=m(r.body)||0}}),u.on("fetch-done",function(t,e){if(this.endTime=a.now(),this.params||(this.params={}),"data"===this.params.protocol)return void g("Ajax/DataUrl/Excluded");this.params.status=e?e.status:0;var n;"string"==typeof this.rxSize&&this.rxSize.length>0&&(n=+this.rxSize);var r={txSize:this.txSize,rxSize:n,duration:a.now()-this.startTime};s("xhr",[this.params,r,this.startTime,this.endTime,"fetch"],this)})}},{}],14:[function(t,e,n){var r={};e.exports=function(t){if(t in r)return r[t];if(0===(t||"").indexOf("data:"))return{protocol:"data"};var e=document.createElement("a"),n=window.location,i={};e.href=t,i.port=e.port;var o=e.href.split("://");!i.port&&o[1]&&(i.port=o[1].split("/")[0].split("@").pop().split(":")[1]),i.port&&"0"!==i.port||(i.port="https"===o[0]?"443":"80"),i.hostname=e.hostname||n.hostname,i.pathname=e.pathname,i.protocol=o[0],"/"!==i.pathname.charAt(0)&&(i.pathname="/"+i.pathname);var a=!e.protocol||":"===e.protocol||e.protocol===n.protocol,s=e.hostname===document.domain&&e.port===n.port;return i.sameOrigin=a&&(!e.hostname||s),"/"===i.pathname&&(r[t]=i),i}},{}],15:[function(t,e,n){function r(t,e){var n=t.responseType;return"json"===n&&null!==e?e:"arraybuffer"===n||"blob"===n||"json"===n?i(t.response):"text"===n||""===n||void 0===n?i(t.responseText):void 0}var i=t(18);e.exports=r},{}],16:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return u.recordSupportability("API/"+e+"/called"),o(t+e,[f.now()].concat(s(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(27),s=t(28),c=t("ee").get("tracer"),f=t("loader"),u=t(21),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var l=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",h=p+"ixn-";a(l,function(t,e){d[e]=i(p,e,!0,"api")}),d.addPageAction=i(p,"addPageAction",!0),d.setCurrentRouteName=i(p,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(h+"tracer",[f.now(),t,n],r),function(){if(c.emit((i?"":"no-")+"fn-start",[f.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],n),t}finally{c.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(h,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),u.recordSupportability("API/noticeError/called"),o("err",[t,f.now(),!1,e])}},{}],17:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],18:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],19:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],20:[function(t,e,n){var r=0,i=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);i&&(r=+i[1]),e.exports=r},{}],21:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[s,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",s="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:s},recordSupportability:r,recordCustom:i}},{}],22:[function(t,e,n){function r(){return s.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,s=t(29);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],23:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?p("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&p("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(f&&f<r.startTime)return;var i=[r],o=a({});o&&i.push(o),p("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||p("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function s(t){if(t instanceof w&&!y){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=h.now()?n.fid=h.now()-e:e>h.offset&&e<=Date.now()?(e-=h.offset,n.fid=h.now()-e):e=h.now(),y=!0,p("timing",["fi",e,n])}}function c(t){"hidden"===t&&(f=h.now(),p("pageHide",[f]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,d,l,p=t("handle"),h=t("loader"),m=t(26),v=t(19),w=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){u=new PerformanceObserver(r);try{u.observe({entryTypes:["paint"]})}catch(g){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(g){}l=new PerformanceObserver(o);try{l.observe({type:"layout-shift",buffered:!0})}catch(g){}}if("addEventListener"in document){var y=!1,x=["click","keydown","mousedown","pointerdown","touchstart"];x.forEach(function(t){document.addEventListener(t,s,v(!1))})}m(c)}},{}],24:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var i,o="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",s=0;s<o.length;s++)i=o[s],"x"===i?a+=t().toString(16):"y"===i?(i=3&t()|8,a+=i.toString(16)):a+=i;return a}function i(){return a(16)}function o(){return a(32)}function a(t){function e(){return n?15&n[r++]:16*Math.random()|0}var n=null,r=0,i=window.crypto||window.msCrypto;i&&i.getRandomValues&&Uint8Array&&(n=i.getRandomValues(new Uint8Array(t)));for(var o=[],a=0;a<t;a++)o.push(e().toString(16));return o.join("")}e.exports={generateUuid:r,generateSpanId:i,generateTraceId:o}},{}],25:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],26:[function(t,e,n){function r(t){function e(){t(s&&document[s]?document[s]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(19);e.exports=r;var o,a,s;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",s="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",s="webkitVisibilityState")},{}],27:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],28:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],29:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?f(t,c,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!p.aborted||o){t&&a&&t(n,r,i);for(var s=e(i),c=m(n),f=c.length,u=0;u<f;u++)c[u].apply(s,r);var l=d[y[n]];return l&&l.push([x,n,r,s]),s}}function o(t,e){g[t]=m(t).concat(e)}function h(t,e){var n=g[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return g[t]||[]}function v(t){return l[t]=l[t]||i(n)}function w(t,e){p.aborted||u(t,function(t,n){e=e||"feature",y[n]=e,e in d||(d[e]=[])})}var g={},y={},x={on:o,addEventListener:o,removeEventListener:h,emit:n,get:v,listeners:m,context:e,buffer:w,abort:s,aborted:!1};return x}function o(t){return f(t,c,a)}function a(){return new r}function s(){(d.api||d.feature)&&(p.aborted=!0,d=p.backlog={})}var c="nr@context",f=t("gos"),u=t(27),d={},l={},p=e.exports=i();e.exports.getOrSetContext=o,p.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!O++){var t=S.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();c(E,function(e,n){t[e]||(t[e]=n)});var n=a();s("mark",["onload",n+S.offset],null,"api"),s("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=p+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){s("mark",["domContent",a()+S.offset],null,"api")}var a=t(22),s=t("handle"),c=t(27),f=t("ee"),u=t(25),d=t(17),l=t(19),p=d.getConfiguration("ssl")===!1?"http":"https",h=window,m=h.document,v="addEventListener",w="attachEvent",g=h.XMLHttpRequest,y=g&&g.prototype,x=!1;NREUM.o={ST:setTimeout,SI:h.setImmediate,CT:clearTimeout,XHR:g,REQ:h.Request,EV:h.Event,PR:h.Promise,MO:h.MutationObserver};var b=""+location,E={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},R=g&&y&&y[v]&&!/CriOS/.test(navigator.userAgent),S=e.exports={offset:a.getLastTimestamp(),now:a,origin:b,features:{},xhrWrappable:R,userAgent:u,disabled:x};if(!x){t(16),t(23),m[v]?(m[v]("DOMContentLoaded",o,l(!1)),h[v]("load",r,l(!1))):(m[w]("onreadystatechange",i),h[w]("onload",r)),s("mark",["firstbyte",a.getLastTimestamp()],null,"api");var O=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,c,f){function nrWrapper(){var o,a,u,l;try{a=this,o=d(arguments),u="function"==typeof r?r(o,a):r||{}}catch(p){i([p,"",[o,a,c],u],t)}s(n+"start",[o,a,c],u,f);try{return l=e.apply(a,o)}catch(h){throw s(n+"err",[o,a,h],u,f),h}finally{s(n+"end",[o,a,l],u,f)}}return a(e)?e:(n||(n=""),nrWrapper[l]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var s,c,f,u="-"===r.charAt(0);for(f=0;f<e.length;f++)c=e[f],s=t[c],a(s)||(t[c]=n(s,u?c+r:r,i,c,o))}function s(n,r,o,a){if(!h||e){var s=h;h=!0;try{t.emit(n,r,o,e,a)}catch(c){i([c,n,r,o],t)}h=s}}return t||(t=u),n.inPlace=r,n.flag=l,n}function i(t,e){e||(e=u);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)p.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[l])}function s(t,e){var n=e(t);return n[l]=t,o(t,n,u),n}function c(t,e,n){var r=t[e];t[e]=s(r,n)}function f(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var u=t("ee"),d=t(28),l="nr@original",p=Object.prototype.hasOwnProperty,h=!1;e.exports=r,e.exports.wrapFunction=s,e.exports.wrapInPlace=c,e.exports.argsToArray=f},{}]},{},["loader",2,13,4,3]);
+  </script>
+  <meta content="authenticity_token" name="csrf-param"/>
+  <meta content="BQTyoIoANH07aJ6Qdygj0kBVu9jkj_WeUTvgNerV4v3zo7j4KcI0H1-ceiKWrC76fSFzDZKj1FBk3aaKmdafyw" name="csrf-token"/>
+  <script>
+   dataLayer = [];
+  </script>
+  <!-- Google Tag Manager -->
+  <script>
+   (function (w,d,s,l,i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event:'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s),
+            dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j,f);
+}) (window,document,'script','dataLayer','GTM-WL6HXT');
+  </script>
+  <!-- End Google Tag Manager -->
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/>
+  <link href="https://rodeo.cdn.xe.gr/rodeo-static/packs/media/images/brand_icons/xe_favicon-a94a5a2ac8fd82cd302e4e2c6aadcb82.ico" rel="shortcut icon" type="image/x-icon"/>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&amp;display=swap&amp;subset=greek,greek-ext,latin-ext" media="screen" rel="stylesheet"/>
+  <link as="font" crossorigin="anonymous" href="https://rodeo.cdn.xe.gr/rodeo-static/packs/media/fonts/xe_webfont/xe_webfont-f6f86730bc4d99c25da806cab21c8eaf.woff" rel="preload" type="font/woff"/>
+  <link href="https://rodeo.cdn.xe.gr/rodeo-static/packs/css/application-c40f233c.css" media="screen" rel="stylesheet"/>
+  <script src="https://rodeo.cdn.xe.gr/rodeo-static/packs/js/application-abb40045cdc065df1e20.js">
+  </script>
+  <script async="" src="https://cdn.apple-mapkit.com/mk/5.x.x/mapkit.js">
+  </script>
+  <script async="" src="https://securepubads.g.doubleclick.net/tag/js/gpt.js">
+  </script>
+  <meta content="xe.gr/property" property="og:site_name"/>
+  <meta content="Πωλήσεις κατοικιών Κρήτη | xe.gr" property="og:title"/>
+  <meta content="https://rodeo.cdn.xe.gr/rodeo-static/packs/media/images/brand_icons/icons/large-cb0a03527e2c71b458aa9692da85a630.png" property="og:image"/>
+  <meta content="https://rodeo.cdn.xe.gr/rodeo-static/packs/media/images/brand_icons/icons/large-cb0a03527e2c71b458aa9692da85a630.png" name="twitter:image"/>
+  <meta content="summary_large_image" name="twitter:card"/>
+  <meta content="1,748 κατοικίες προς πώληση στην περιοχή Κρήτη, μόνο στη Χρυσή Ευκαιρία, το #1 στην αναζήτηση ακινήτων. Όλα τα διαθέσιμα ακίνητα της αγοράς, χωρίς διπλές αγγελίες, προβολή σε χάρτη." property="og:description"/>
+  <meta content="1,748 κατοικίες προς πώληση στην περιοχή Κρήτη, μόνο στη Χρυσή Ευκαιρία, το #1 στην αναζήτηση ακινήτων. Όλα τα διαθέσιμα ακίνητα της αγοράς, χωρίς διπλές αγγελίες, προβολή σε χάρτη." name="description"/>
+  <link href="https://www.xe.gr/property/r/poliseis-katoikion/ChIJoZh9gi_-mhQRMMa54iy9AAE_krhth" rel="canonical"/>
+  <meta content="#fab414" property="theme-color"/>
+  <meta content="xe.gr" name="application-name"/>
+  <meta content="198837063843" property="fb:pages"/>
+  <meta content="website" property="og:type"/>
+  <meta content="https://www.xe.gr/property/results?transaction_name=buy&amp;item_type=re_residence&amp;geo_place_ids%5B%5D=ChIJoZh9gi_-mhQRMMa54iy9AAE&amp;page=52" property="og:url"/>
+  <meta content="@xe_gr" name="twitter:site"/>
+  <meta content="@xe_gr" name="twitter:creator"/>
+  <meta content="#ffffff" name="msapplication-TileColor"/>
+  <meta content="https://rodeo.cdn.xe.gr/rodeo-static/packs/media/images/brand_icons/tiles/small-22445783d2f1d1592d09d43d67981d94.png" name="msapplication-square70x70logo"/>
+  <meta content="https://rodeo.cdn.xe.gr/rodeo-static/packs/media/images/brand_icons/tiles/medium-5b5f053b094e848d10d33fa961e50c10.png" name="msapplication-square150x150logo"/>
+  <meta content="https://rodeo.cdn.xe.gr/rodeo-static/packs/media/images/brand_icons/tiles/wide-231b730b2dfe7badb119df4956fe0106.png" name="msapplication-wide310x150logo"/>
+  <meta content="https://rodeo.cdn.xe.gr/rodeo-static/packs/media/images/brand_icons/tiles/large-99581279929643e9f9bb90936400365b.png" name="msapplication-square310x310logo"/>
+  <link path_to_image="https://rodeo.cdn.xe.gr/rodeo-static/packs/media/images/brand_icons/apple_touch/small-68afd71b5df2b2fb40c14544c2580ae8.jpg" rel="apple-touch-icon-precomposed"/>
+  <link path_to_image="https://rodeo.cdn.xe.gr/rodeo-static/packs/media/images/brand_icons/apple_touch/large-091ea42a310b1de351cb0bd137fb9e62.jpg" rel="apple-touch-icon-precomposed" size="72x72"/>
+  <link path_to_image="https://rodeo.cdn.xe.gr/rodeo-static/packs/media/images/brand_icons/apple_touch/medium-d9df8fb3e855508203db147967ce6fe2.jpg" rel="apple-touch-icon-precomposed" size="114x114"/>
+  <link path_to_image="https://rodeo.cdn.xe.gr/rodeo-static/packs/media/images/brand_icons/apple_touch/wide-3c75b489eb65a8114586b98c0777be96.jpg" rel="apple-touch-icon-precomposed" size="144x144"/>
+  <link path_to_image="https://rodeo.cdn.xe.gr/rodeo-static/packs/media/images/brand_icons/apple_touch/big-a4788afc490b1b802a0943f6558e8b46.png" rel="apple-touch-icon"/>
+  <meta content="5ae3ab4a8c10276f5bf50c7dbdbd91250abdc2c67a8386fa64630aa262acabf6" name="ahrefs-site-verification"/>
+  <title>
+   Πωλήσεις κατοικιών Κρήτη | xe.gr
+  </title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-4151742-1">
+  </script>
+  <script>
+   window.dataLayer = window.dataLayer || [];
+function gtag() { dataLayer.push(arguments); }
+gtag('js', new Date());
+gtag('config', 'UA-4151742-1');
+  </script>
+ </head>
+ <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+   <iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-WL6HXT&gt;" style="display:none; visibility:hidden;" width="0">
+   </iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <main>
+   <div class="property-results-container" data-ads='[{"id":"735094560","internal_id":"44380510","item_type":"re_residence","address":"Ηράκλειο","geo_lat":35.335599715422674,"geo_lng":25.139306419332286,"ad_group_id":null,"levels":["Ισόγειο","Υπερυψωμένο"],"bedrooms":null,"bathrooms":null,"construction_year":"1961","publication_text":"(ΕΡΓΑΤΙΚΟ ΚΕΝΤΡΟ) Υπερυψωμένο γωνιακό ισόγειο διαμέρισμα κατασκευή του 1961 , 137 τ. μ. Το οποίο προσφέρει σαλοτραπεζαρία, κουζίνα, τρία υπνοδωμάτια, μπάνιο, τζάκι, κεντρική θέρμανση, βεράντα. Έχει δικαίωμα σε ημιυπόγεια αποθήκη 75 τ. μ. Κατάλληλο και για επαγγελματική στέγη","display_golden_border":false,"owner_logo":"https://a2.xe.gr/LOGO/1636111997982.jpg","price_per_unit_area":"1058","account_id":"1587601","company_title":"Αστυ Επενδυτική","is_commercial":true,"sponsored":false,"title":"Διαμέρισμα 137 τ.μ.","title_abbreviation":"Διαμέρισμα 137 τ.μ.","price":"145.000 €","price_with_abbreviation":"145k €","price_per_square_meter":"1.058 €/τ.μ.","size_with_square_meter":"137 τ.μ.","date":"","extra_seo_info":"Πώληση κατοικίας","image_alt":"Πώληση κατοικίας Ηράκλειο Διαμέρισμα 137 τ.μ.","image_gallery":[],"url":"https://www.xe.gr/property/d/poliseis-katoikion/735094560/hrakleio-145000-137"},{"id":"654028306","internal_id":"42021623","item_type":"re_residence","address":"Χανιά","geo_lat":35.4953103927339,"geo_lng":24.04692560402337,"ad_group_id":null,"levels":["Ισόγειο"],"bedrooms":"6","bathrooms":null,"construction_year":null,"publication_text":"χαρακτηριστικά: BBQ. Κωδικός Ακινήτου: 51207 13/3/2020 8:22 μμ","display_golden_border":false,"owner_logo":"https://a2.xe.gr/LOGO/1571380351243.jpg","price_per_unit_area":"3125","account_id":"1905993","company_title":"Plasis Real Estate + Development","is_commercial":true,"sponsored":false,"title":"Μονοκατοικία 320 τ.μ.","title_abbreviation":"Μονοκατοικία 320 τ.μ.","price":"1.000.000 €","price_with_abbreviation":"1m €","price_per_square_meter":"3.125 €/τ.μ.","size_with_square_meter":"320 τ.μ.","date":"","extra_seo_info":"Πώληση κατοικίας","image_alt":"Πώληση κατοικίας Χανιά Μονοκατοικία 320 τ.μ.","image_gallery":[{"medium":{"webp":"https://a2.xe.gr/20200313/202510_772236_640_480.webp","jpeg":"https://a2.xe.gr/20200313/202510_772236_640_480.jpg"}},{"medium":{"webp":"https://a2.xe.gr/20200313/202514_451071_640_480.webp","jpeg":"https://a2.xe.gr/20200313/202514_451071_640_480.jpg"}},{"medium":{"webp":"https://a2.xe.gr/20200313/202513_182251_640_480.webp","jpeg":"https://a2.xe.gr/20200313/202513_182251_640_480.jpg"}},{"medium":{"webp":"https://a2.xe.gr/20200313/202511_238754_640_480.webp","jpeg":"https://a2.xe.gr/20200313/202511_238754_640_480.jpg"}},{"medium":{"webp":"https://a2.xe.gr/20200313/202513_299530_640_480.webp","jpeg":"https://a2.xe.gr/20200313/202513_299530_640_480.jpg"}},{"medium":{"webp":"https://a2.xe.gr/20200313/202514_742486_640_480.webp","jpeg":"https://a2.xe.gr/20200313/202514_742486_640_480.jpg"}},{"medium":{"webp":"https://a2.xe.gr/20200313/202511_525119_640_480.webp","jpeg":"https://a2.xe.gr/20200313/202511_525119_640_480.jpg"}},{"medium":{"webp":"https://a2.xe.gr/20200313/202512_795242_640_480.webp","jpeg":"https://a2.xe.gr/20200313/202512_795242_640_480.jpg"}},{"medium":{"webp":"https://a2.xe.gr/20200313/202512_136364_640_480.webp","jpeg":"https://a2.xe.gr/20200313/202512_136364_640_480.jpg"}}],"url":"https://www.xe.gr/property/d/poliseis-katoikion/654028306/chania-1000000-320"},{"id":"777243625","internal_id":"45345313","item_type":"re_residence","address":"Έλος","geo_lat":35.361893,"geo_lng":23.63448,"ad_group_id":null,"levels":[],"bedrooms":"3","bathrooms":"1","construction_year":"1920","publication_text":"πετρόχτιστη, σε 30 στρέμματα βιολογικής καλλιέργειας ελαιόδεντρα, μη αναπαλαιωμένη, κατάλληλη για ενοικιαζόμενη","display_golden_border":false,"owner_logo":null,"price_per_unit_area":"786","account_id":null,"company_title":null,"is_commercial":false,"sponsored":false,"title":"Μονοκατοικία 140 τ.μ.","title_abbreviation":"Μονοκατοικία 140 τ.μ.","price":"110.000 €","price_with_abbreviation":"110k €","price_per_square_meter":"786 €/τ.μ.","size_with_square_meter":"140 τ.μ.","date":"","extra_seo_info":"Πώληση κατοικίας","image_alt":"Πώληση κατοικίας Έλος Μονοκατοικία 140 τ.μ.","image_gallery":[],"url":"https://www.xe.gr/property/d/poliseis-katoikion/777243625/elos-110000-140"},{"id":"735094853","internal_id":"44380529","item_type":"re_residence","address":"Ηράκλειο","geo_lat":35.33285890077241,"geo_lng":25.137462883589595,"ad_group_id":null,"levels":["1ος"],"bedrooms":null,"bathrooms":null,"construction_year":"1961","publication_text":"(ΕΡΓΑΤΙΚΟ ΚΕΝΤΡΟ) Γωνιακό διαμέρισμα 1 ου ορόφου, εξαιρετικής κατασκευής του 1961 , 156 τ. μ. Προσφέρει σαλόνι-τραπεζαρία με τζάκι, κουζίνα, τρία υπνοδωμάτια, μπάνιο, βεράντα, κεντρική θέρμανση, ημιυπόγεια αποθήκη 75 τ. μ. Κατάλληλο και για επαγγελματική στέγη.","display_golden_border":false,"owner_logo":"https://a2.xe.gr/LOGO/1636111997982.jpg","price_per_unit_area":"1122","account_id":"1587601","company_title":"Αστυ Επενδυτική","is_commercial":true,"sponsored":false,"title":"Διαμέρισμα 156 τ.μ.","title_abbreviation":"Διαμέρισμα 156 τ.μ.","price":"175.000 €","price_with_abbreviation":"175k €","price_per_square_meter":"1.122 €/τ.μ.","size_with_square_meter":"156 τ.μ.","date":"","extra_seo_info":"Πώληση κατοικίας","image_alt":"Πώληση κατοικίας Ηράκλειο Διαμέρισμα 156 τ.μ.","image_gallery":[],"url":"https://www.xe.gr/property/d/poliseis-katoikion/735094853/hrakleio-175000-156"},{"id":"743862832","internal_id":"44583986","item_type":"re_residence","address":"Ηράκλειο","geo_lat":35.33765316195449,"geo_lng":25.131310714009036,"ad_group_id":null,"levels":["1ος","2ος","3ος"],"bedrooms":null,"bathrooms":null,"construction_year":null,"publication_text":"(ΚΕΝΤΡΟ) Αυτόνομο κτίριο αποτελούμενο από 6 πλήρως ανακαινισμένα διαμερίσματα 1 ου, 2 ου, και 3 ου ορόφου. Συνολικό εμβαδόν ακινήτου 320 τμ. Ιδανικό για επένδυση και εκμετάλλευση.","display_golden_border":false,"owner_logo":"https://a2.xe.gr/LOGO/1636111997982.jpg","price_per_unit_area":"1406","account_id":"1587601","company_title":"Αστυ Επενδυτική","is_commercial":true,"sponsored":false,"title":"Κτίριο 320 τ.μ.","title_abbreviation":"Κτίριο 320 τ.μ.","price":"450.000 €","price_with_abbreviation":"450k €","price_per_square_meter":"1.406 €/τ.μ.","size_with_square_meter":"320 τ.μ.","date":"","extra_seo_info":"Πώληση κατοικίας","image_alt":"Πώληση κατοικίας Ηράκλειο Κτίριο 320 τ.μ.","image_gallery":[],"url":"https://www.xe.gr/property/d/poliseis-katoikion/743862832/hrakleio-450000-320"},{"id":"743166853","internal_id":"44569886","item_type":"re_residence","address":"Χανιά","geo_lat":35.50951332211123,"geo_lng":24.017814757655035,"ad_group_id":null,"levels":["Ισόγειο"],"bedrooms":"3","bathrooms":"1","construction_year":"1935","publication_text":"Πωλείται φωτεινή μονοκατοικία, 140 τ.μ. στην περιοχή \"Χανιά, Κέντρο\"+υπόγειο 80 τμ. σε οικόπεδο 480 τμ. και κτίζει 480 τμ. Κατάλληλο για επαγγελματική στέγη η για πολυκατοικία. Αποτελείται από 3 υπνοδωμάτια, σαλόνι, κουζίνα, και μπάνιο. Επιπρόσθετα υπάρχει αποθήκη, κήπος και θέση στάθμευσης. Διαθέτει αυτόνομη θέρμανση με φυσικό αέριο. Έχει ξύλινα κουφώματα και δάπεδα από μάρμαρο - πλακάκι. Η ενεργειακή κλάση του ακινήτου είναι Το ΠΕΑ είναι υπό έκδοση. Τιμή πώλησης: 420.000€. Κωδικός ακινήτου: 5767965","display_golden_border":false,"owner_logo":"https://a2.xe.gr/LOGO/1573218467166.jpg","price_per_unit_area":"3000","account_id":"1921593","company_title":"Contract Real Estate","is_commercial":true,"sponsored":false,"title":"Μονοκατοικία 140 τ.μ.","title_abbreviation":"Μονοκατοικία 140 τ.μ.","price":"420.000 €","price_with_abbreviation":"420k €","price_per_square_meter":"3.000 €/τ.μ.","size_with_square_meter":"140 τ.μ.","date":"","extra_seo_info":"Πώληση κατοικίας","image_alt":"Πώληση κατοικίας Χανιά Μονοκατοικία 140 τ.μ.","image_gallery":[{"medium":{"webp":"https://a2.xe.gr/20220606/143512_169746_640_480.webp","jpeg":"https://a2.xe.gr/20220606/143512_169746_640_480.jpg"}},{"medium":{"webp":"https://a2.xe.gr/20220606/143516_462298_640_480.webp","jpeg":"https://a2.xe.gr/20220606/143516_462298_640_480.jpg"}},{"medium":{"webp":"https://a2.xe.gr/20220606/143520_492133_640_480.webp","jpeg":"https://a2.xe.gr/20220606/143520_492133_640_480.jpg"}},{"medium":{"webp":"https://a2.xe.gr/20220606/143525_510320_640_480.webp","jpeg":"https://a2.xe.gr/20220606/143525_510320_640_480.jpg"}},{"medium":{"webp":"https://a2.xe.gr/20220606/143529_973453_640_480.webp","jpeg":"https://a2.xe.gr/20220606/143529_973453_640_480.jpg"}},{"medium":{"webp":"https://a2.xe.gr/20220606/143533_715821_640_480.webp","jpeg":"https://a2.xe.gr/20220606/143533_715821_640_480.jpg"}},{"medium":{"webp":"https://a2.xe.gr/20220606/143538_695391_640_480.webp","jpeg":"https://a2.xe.gr/20220606/143538_695391_640_480.jpg"}},{"medium":{"webp":"https://a2.xe.gr/20220606/143542_876364_640_480.webp","jpeg":"https://a2.xe.gr/20220606/143542_876364_640_480.jpg"}},{"medium":{"webp":"https://a2.xe.gr/20220606/143546_284012_640_480.webp","jpeg":"https://a2.xe.gr/20220606/143546_284012_640_480.jpg"}},{"medium":{"webp":"https://a2.xe.gr/20220606/143551_049929_640_480.webp","jpeg":"https://a2.xe.gr/20220606/143551_049929_640_480.jpg"}}],"url":"https://www.xe.gr/property/d/poliseis-katoikion/743166853/chania-420000-140"},{"id":"741951123","internal_id":"44540792","item_type":"re_residence","address":"Kounavi","geo_lat":35.23855242125679,"geo_lng":25.186249829326847,"ad_group_id":null,"levels":["Ισόγειο"],"bedrooms":null,"bathrooms":null,"construction_year":null,"publication_text":"ΚΟΥΝΑΒΟΙ, Εγκαταλελειμμένο παλαιό κτίσμα, περίπου 80 τετραγωνικά μέτρα σε αντίστοιχο οικόπεδο.","display_golden_border":false,"owner_logo":"https://a2.xe.gr/LOGO/1636111997982.jpg","price_per_unit_area":"250","account_id":"1587601","company_title":"Αστυ Επενδυτική","is_commercial":true,"sponsored":false,"title":"Μονοκατοικία 80 τ.μ.","title_abbreviation":"Μονοκατοικία 80 τ.μ.","price":"20.000 €","price_with_abbreviation":"20k €","price_per_square_meter":"250 €/τ.μ.","size_with_square_meter":"80 τ.μ.","date":"","extra_seo_info":"Πώληση κατοικίας","image_alt":"Πώληση κατοικίας Kounavi Μονοκατοικία 80 τ.μ.","image_gallery":[],"url":"https://www.xe.gr/property/d/poliseis-katoikion/741951123/kounavi-20000-80"},{"id":"630983347","internal_id":"41277055","item_type":"re_residence","address":"Χανιά","geo_lat":35.505404172132565,"geo_lng":24.01871597582661,"ad_group_id":null,"levels":["1ος"],"bedrooms":"3","bathrooms":"2","construction_year":"1970","publication_text":"Πωλείται φωτεινή μονοκατοικία, 145 τ.μ. στην περιοχή \"Χανιά, Κέντρο\", κατασκευής του 1970. Βρίσκεται σε οικόπεδο 280 τ.μ. που χτίζει 224 τ.μ. Αποτελείται από 3 υπνοδωμάτια, σαλόνι, κουζίνα, 2 μπάνια, ενώ είναι διαρρυθμισμένη σε 2 επίπεδα. Επιπρόσθετα υπάρχει κήπος, βεράντα και θέση στάθμευσης. Έχει κουφώματα αλουμινίου και δάπεδα από πλακάκι. Στα επιπλέον χαρακτηριστικά του ακινήτου προστίθενται η καλωδιακή τηλεόραση.Βρίσκεται σε απόσταση 150 μ. από το κέντρο των Χανίων και 2000 μ. από τη θάλασσα. Τιμή πώλησης:190.000€. Κωδικός ακινήτου: 5768138 Contract Real Estate Σφακίων 2, Χανιά, Ελλάδα http://www.contract-re.com/ info@contract-re.com Τηλέφωνο: 2821046076 Κινητό: 0030 6985813788 Προσοχή Για την υπόδειξη του ακινήτου είναι απαραίτητη η υπόδειξη της αστυνομικής ταυτότητας και του Α.Φ.Μ. σας σύμφωνα με τον Ν.4072/11-4-2012 ΦΕΚ 86 Α.","display_golden_border":false,"owner_logo":"https://a2.xe.gr/LOGO/1573218467166.jpg","price_per_unit_area":"1310","account_id":"1921593","company_title":"Contract Real Estate","is_commercial":true,"sponsored":false,"title":"Μονοκατοικία 145 τ.μ.","title_abbreviation":"Μονοκατοικία 145 τ.μ.","price":"190.000 €","price_with_abbreviation":"190k €","price_per_square_meter":"1.310 €/τ.μ.","size_with_square_meter":"145 τ.μ.","date":"","extra_seo_info":"Πώληση κατοικίας","image_alt":"Πώληση κατοικίας Χανιά Μονοκατοικία 145 τ.μ.","image_gallery":[{"medium":{"webp":"https://a2.xe.gr/20220606/143620_979485_640_480.webp","jpeg":"https://a2.xe.gr/20220606/143620_979485_640_480.jpg"}},{"medium":{"webp":"https://a2.xe.gr/20220606/143624_213223_640_480.webp","jpeg":"https://a2.xe.gr/20220606/143624_213223_640_480.jpg"}},{"medium":{"webp":"https://a2.xe.gr/20220606/143628_142241_640_480.webp","jpeg":"https://a2.xe.gr/20220606/143628_142241_640_480.jpg"}},{"medium":{"webp":"https://a2.xe.gr/20220606/143633_102226_640_480.webp","jpeg":"https://a2.xe.gr/20220606/143633_102226_640_480.jpg"}},{"medium":{"webp":"https://a2.xe.gr/20220606/143637_473640_640_480.webp","jpeg":"https://a2.xe.gr/20220606/143637_473640_640_480.jpg"}},{"medium":{"webp":"https://a2.xe.gr/20220606/143641_785807_640_480.webp","jpeg":"https://a2.xe.gr/20220606/143641_785807_640_480.jpg"}},{"medium":{"webp":"https://a2.xe.gr/20220606/143646_405745_640_480.webp","jpeg":"https://a2.xe.gr/20220606/143646_405745_640_480.jpg"}},{"medium":{"webp":"https://a2.xe.gr/20220606/143650_865855_640_480.webp","jpeg":"https://a2.xe.gr/20220606/143650_865855_640_480.jpg"}},{"medium":{"webp":"https://a2.xe.gr/20220606/143654_153546_640_480.webp","jpeg":"https://a2.xe.gr/20220606/143654_153546_640_480.jpg"}},{"medium":{"webp":"https://a2.xe.gr/20220606/143658_612302_640_480.webp","jpeg":"https://a2.xe.gr/20220606/143658_612302_640_480.jpg"}}],"url":"https://www.xe.gr/property/d/poliseis-katoikion/630983347/chania-190000-145"},{"id":"767973396","internal_id":"45202340","item_type":"re_residence","address":"Ηράκλειο","geo_lat":35.34094191825091,"geo_lng":25.12611766182499,"ad_group_id":null,"levels":["Ισόγειο"],"bedrooms":"2","bathrooms":"2","construction_year":"1960","publication_text":"Μοναδική επενδυτική ευκαιρία στο κέντρο του Ηρακλείου πωλείται παλιά Μονοκατοικία 96τμ σε δύο ορόφους σε οικόπεδο 52 τμ με συντελεστή 1,8 . Ιδανική τοποθεσία μόλις 3 λεπτά από την παραλιακή Ηρακλείου και μόλις λίγα λεπτά από την αγορά από συγκοινωνίες από εστιατόρια καφετέριες και από κάθε είδους υπηρεσία.","display_golden_border":false,"owner_logo":"https://a2.xe.gr/LOGO/1622120851959.jpg","price_per_unit_area":"833","account_id":"616129","company_title":"Golden Home","is_commercial":true,"sponsored":false,"title":"Μονοκατοικία 96 τ.μ.","title_abbreviation":"Μονοκατοικία 96 τ.μ.","price":"80.000 €","price_with_abbreviation":"80k €","price_per_square_meter":"833 €/τ.μ.","size_with_square_meter":"96 τ.μ.","date":"","extra_seo_info":"Πώληση κατοικίας","image_alt":"Πώληση κατοικίας Ηράκλειο Μονοκατοικία 96 τ.μ.","image_gallery":[],"url":"https://www.xe.gr/property/d/poliseis-katoikion/767973396/hrakleio-80000-96"},{"id":"738072054","internal_id":"44452784","item_type":"re_residence","address":"Ηράκλειο","geo_lat":35.33821294511342,"geo_lng":25.127561704166578,"ad_group_id":null,"levels":["Ισόγειο"],"bedrooms":"1","bathrooms":"1","construction_year":null,"publication_text":"(ΑΓΙΑ ΤΡΙΑΔΑ) Μονοκατοικία 55 τ. μ σε καλή κατάσταση. Βρίσκεται σε οικόπεδο 61 τ. μ, και έχει Σ. Δ 2. Ιδανικό για ιδιοκατοίκηση η επένδυση.","display_golden_border":false,"owner_logo":"https://a2.xe.gr/LOGO/1636111997982.jpg","price_per_unit_area":"1345","account_id":"1587601","company_title":"Αστυ Επενδυτική","is_commercial":true,"sponsored":false,"title":"Μονοκατοικία 55 τ.μ.","title_abbreviation":"Μονοκατοικία 55 τ.μ.","price":"74.000 €","price_with_abbreviation":"74k €","price_per_square_meter":"1.345 €/τ.μ.","size_with_square_meter":"55 τ.μ.","date":"","extra_seo_info":"Πώληση κατοικίας","image_alt":"Πώληση κατοικίας Ηράκλειο Μονοκατοικία 55 τ.μ.","image_gallery":[],"url":"https://www.xe.gr/property/d/poliseis-katoikion/738072054/hrakleio-74000-55"},{"id":"774674562","internal_id":"45378593","item_type":"re_residence","address":"Ηράκλειο","geo_lat":35.33717390077144,"geo_lng":25.13552781913716,"ad_group_id":null,"levels":["Ημιυπόγειο"],"bedrooms":null,"bathrooms":"1","construction_year":null,"publication_text":"( ΠΑΛΑΙΑ ΚΑΤΕΕ) Ενοικιάζεται ημιυπόγεια μονόχωρη γκαρσονιέρα 28 τ,μ. . σε άριστη κατάσταση. Με αυτόνομη θέρμανση, χωρίς κοινόχρηστα. Κατασκευή 2000. ΠΕΑ υπό έκδοση.","display_golden_border":false,"owner_logo":"https://a2.xe.gr/LOGO/1636111997982.jpg","price_per_unit_area":"8","account_id":"1587601","company_title":"Αστυ Επενδυτική","is_commercial":true,"sponsored":false,"title":"Διαμέρισμα 28 τ.μ.","title_abbreviation":"Διαμέρισμα 28 τ.μ.","price":"220 €","price_with_abbreviation":"220 €","price_per_square_meter":"8 €/τ.μ.","size_with_square_meter":"28 τ.μ.","date":"","extra_seo_info":"Πώληση κατοικίας","image_alt":"Πώληση κατοικίας Ηράκλειο Διαμέρισμα 28 τ.μ.","image_gallery":[],"url":"https://www.xe.gr/property/d/poliseis-katoikion/774674562/hrakleio-220-28"},{"id":"731161597","internal_id":"44270527","item_type":"re_residence","address":"Επισκοπή","geo_lat":35.257201,"geo_lng":25.236239,"ad_group_id":null,"levels":["Ισόγειο"],"bedrooms":null,"bathrooms":null,"construction_year":"1999","publication_text":"Κωδ: 1-10681 - Επισκοπή Κέντρο ΠΩΛΕΙΤΑΙ Ημιτελής Μεζονέτα σε 3 επίπεδα με άδεια οικοδομής 47 τ.μ. Ισόγειο σε οικόπεδο 37τ.μ... Δυνατότητα επέκτασης. - Τιμή: 30.000 € 06/06/2022 09:37:00pm","display_golden_border":false,"owner_logo":"https://a2.xe.gr/LOGO/1636121580378.jpg","price_per_unit_area":"638","account_id":"2080177","company_title":"Estate Hall","is_commercial":true,"sponsored":false,"title":"Μεζονέτα 47 τ.μ.","title_abbreviation":"Μεζονέτα 47 τ.μ.","price":"30.000 €","price_with_abbreviation":"30k €","price_per_square_meter":"638 €/τ.μ.","size_with_square_meter":"47 τ.μ.","date":"","extra_seo_info":"Πώληση κατοικίας","image_alt":"Πώληση κατοικίας Επισκοπή Μεζονέτα 47 τ.μ.","image_gallery":[],"url":"https://www.xe.gr/property/d/poliseis-katoikion/731161597/episkoph-30000-47"},{"id":"766675084","internal_id":"45168475","item_type":"re_residence","address":"Μοχός","geo_lat":35.263842,"geo_lng":25.421891,"ad_group_id":null,"levels":["Ισόγειο"],"bedrooms":null,"bathrooms":null,"construction_year":"1920","publication_text":"06/06/2022 09:41:39pm","display_golden_border":false,"owner_logo":"https://a2.xe.gr/LOGO/1636121580378.jpg","price_per_unit_area":"250","account_id":"2080177","company_title":"Estate Hall","is_commercial":true,"sponsored":false,"title":"Μονοκατοικία 160 τ.μ.","title_abbreviation":"Μονοκατοικία 160 τ.μ.","price":"40.000 €","price_with_abbreviation":"40k €","price_per_square_meter":"250 €/τ.μ.","size_with_square_meter":"160 τ.μ.","date":"","extra_seo_info":"Πώληση κατοικίας","image_alt":"Πώληση κατοικίας Μοχός Μονοκατοικία 160 τ.μ.","image_gallery":[],"url":"https://www.xe.gr/property/d/poliseis-katoikion/766675084/mochos-40000-160"},{"id":"769973384","internal_id":"45253647","item_type":"re_residence","address":"Ηράκλειο","geo_lat":35.336833,"geo_lng":25.133349,"ad_group_id":null,"levels":["Ισόγειο"],"bedrooms":null,"bathrooms":null,"construction_year":"1960","publication_text":"Κωδικός ακινήτου: 1-12259 - Ηράκλειο Κρήτης Κέντρο ΠΩΛΕΙΤΑΙ μονοκατοικία συνολικής επιφάνειας 150 τ.μ. ισόγειο, 1ος και 2ος όροφος. . Αποτελείται από ισόγειο κατάστημα 64τμ., 1ο όροφο 64τ.μ. όπου βρίσκονται 2 γκαρσονιέρες 1μονόχωρη και 1 δίχωρη, και 2ο όροφο όπου βρίσκεται 1 μονόχωρη γκαρσονιέρα 22τ.μ. Κατασκευής 1960 - Τιμή: 270.000 € Δείτε και τα υπόλοιπα ακίνητα μας στο www.estatehall.gr Σύμφωνα με τον Ν.4072/11-4-2012 ΦΕΚ 86 Α. για την υπόδειξη του ακινήτου είναι απαραίτητη η υπόδειξη της αστυνομικής ταυτότητας και του Α.Φ.Μ. 06/06/2022 09:44:14pm","display_golden_border":false,"owner_logo":"https://a2.xe.gr/LOGO/1636121580378.jpg","price_per_unit_area":"1800","account_id":"2080177","company_title":"Estate Hall","is_commercial":true,"sponsored":false,"title":"Κτίριο 150 τ.μ.","title_abbreviation":"Κτίριο 150 τ.μ.","price":"270.000 €","price_with_abbreviation":"270k €","price_per_square_meter":"1.800 €/τ.μ.","size_with_square_meter":"150 τ.μ.","date":"","extra_seo_info":"Πώληση κατοικίας","image_alt":"Πώληση κατοικίας Ηράκλειο Κτίριο 150 τ.μ.","image_gallery":[],"url":"https://www.xe.gr/property/d/poliseis-katoikion/769973384/hrakleio-270000-150"}]' data-build-environment="production" data-button-attribute='{"close":"Κλείσιμο","cancel":"Aκύρωση","sign_in":"Σύνδεση","sign_in_for_saving_search":"Για να αποθηκεύσεις την αναζήτηση πρέπει πρώτα να συνδεθείς στον λογαριασμό σου.","save_search_and_alert":"Αποθήκευση αναζήτησης \u0026 ειδοποίηση","save_and_alert":"Αποθήκευση αναζήτησης","saved_search":"Αποθηκευμένη","title":"Τίτλος αναζήτησης","notification_frequency":"Συχνότητα ειδοποιήσεων","no_alert":"Xωρίς ειδοποίηση","instant":"Άμεσα","premium":"Premium","every_3_days":"Κάθε 3 ημέρες","every_7_days":"Κάθε 7 ημέρες","channel":"Mέσο ειδοποιήσεων","email":"Email","save":"Αποθήκευση","your_search_has_been_saved":"Η αναζήτησή σου αποθηκεύτηκε με επιτυχία!","your_search_has_not_been_saved":"Η αναζήτησή σου δεν έχει αποθηκευτεί.","try_again":"Δοκίμασε ξανά.","placeholder":"Δώσε έναν τίτλο στην αναζήτηση σου","save_search_and_get_notified_for_new_listings":"Αποθηκεύστε την αναζήτησή σας και ειδοποιηθείτε για νέες θέσεις εργασίας."}' data-favorites-urls='{"sign_in_url":"https://my.xe.gr/login","property_favorite_url":"https://www.xe.gr/account/property_favorites","my_lists_url":"https://www.xe.gr/my-lists.html?from=menubar","add_account_favorite_ad":"https://www.xe.gr/account/property_favorites/:id/add","remove_account_favorite_ad":"https://www.xe.gr/account/property_favorites/:id/remove"}' data-flash="{}" data-header-categories='[["Ακίνητα", "https://www.xe.gr/property?from=nav"], ["Εργασία", "https://www.xe.gr/%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1/%CE%B5%CF%8D%CF%81%CE%B5%CF%83%CE%B7-%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1%CF%82?from=nav"], ["Cars", "https://www.xe.gr/automoto/?from=nav"], ["Επαγγελματίες", "https://www.xe.gr/professionals?from=nav"], ["Βιβλία, τύπος, ταινίες &amp; μουσική", "https://www.xe.gr/biblia-tainies-mousiki/?from=nav"], ["Βρεφικά &amp; παιδικά", "https://www.xe.gr/brefika-paidika/?from=nav"], ["Διάφορα είδη", "https://www.xe.gr/diafora-eidh/?from=nav"], ["Ελεύθερος χρόνος", "https://www.xe.gr/eleytheros-xronos/?from=nav"], ["Ένδυση, υπόδηση &amp; προσωπικά είδη", "https://www.xe.gr/rouxa-kosmimata/?from=nav"], ["Εξοπλισμός γραφείου", "https://www.xe.gr/eksoplismos-grafeiou/?from=nav"], ["Έπιπλα", "https://www.xe.gr/epipla/?from=nav"], ["Επιχειρησιακά", "https://www.xe.gr/epixeirisiaka/?from=nav"], ["Ζώα &amp; αξεσουάρ", "https://www.xe.gr/zoa/?from=nav"], ["Ηλεκτρικές συσκευές", "https://www.xe.gr/hlektrikes-syskeves/?from=nav"], ["Ηλεκτρονικά", "https://www.xe.gr/hlektronika/?from=nav"], ["Μουσικά όργανα &amp; αξεσουάρ", "https://www.xe.gr/mousika-organa/?from=nav"], ["Προσωπικά &amp; κοινωνικά", "https://www.xe.gr/prosopika/?from=nav"], ["Σκάφη", "https://www.xe.gr/boats/?from=nav"], ["Σπίτι &amp; κήπος", "https://www.xe.gr/spiti-kipos/?from=nav"], ["Ταξίδι", "https://www.xe.gr/travel/?from=nav"], ["Τηλεφωνία", "https://www.xe.gr/tilefonia/?from=nav"], ["Υγεία", "https://www.xe.gr/health/?from=nav"], ["Υπολογιστές", "https://www.xe.gr/computers/?from=nav"]]' data-language="el" data-links='{"results":{"log_out_url":"https://www.xe.gr/logout?return_url=https%3A%2F%2Fwww.xe.gr%2Fproperty%2Fresults%3Ftransaction_name%3Dbuy%26item_type%3Dre_residence%26geo_place_ids%255B%255D%3DChIJoZh9gi_-mhQRMMa54iy9AAE%26page%3D52","log_out_plain_url":"https://www.xe.gr/logout","gravatar_url":"https://www.gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?d=mp\u0026s=29","my_ads_url":"https://my.xe.gr/app/mylists/listings?activeAds\u0026from=menu","contact_url":"https://support.xe.gr/el/articles/587201-επικοινωνία-με-τη-χρυσή-ευκαιρία?from=nav","sign_up_url":"https://my.xe.gr/create-account","sign_in_url":"https://my.xe.gr/login?redirect=https://www.xe.gr/property/results?transaction_name=buy\u0026item_type=re_residence\u0026geo_place_ids%5B%5D=ChIJoZh9gi_-mhQRMMa54iy9AAE\u0026page=52","sign_in_plain_url":"https://my.xe.gr/login","new_ad_url":"https://my.xe.gr/app/NewAd/category","root_url":"https://www.xe.gr/","property_results_root_path":"/property/results","search_url":"https://www.xe.gr/property/results/map_search","autocomplete_url":"https://www.xe.gr/services/places/autocomplete","metrics_url":"https://www.xe.gr/property/result_metrics","unique_property_search_url":"https://www.xe.gr/property/unique_properties","unique_property_report_url":"https://www.xe.gr/property/unique_properties/report","upgrade_to_premium_url":"https://my.xe.gr/app/static/premium-user?from=menu","pro_users_sign_in_url":"https://pro2.xe.gr","add_account_hidden_ad_url":"https://www.xe.gr/account/property_hidden_ads/:id/add","remove_account_hidden_ad_url":"https://www.xe.gr/account/property_hidden_ads/:id/remove","report_action_url":"https://www.xe.gr/services/reports","terms_url":"https://support.xe.gr/el/articles/364832-όροι-χρήσης","privacy_policy_url":"https://support.xe.gr/el/articles/1941936-πολιτική-δεδομένων","market_state_url":"https://www.xe.gr/property/times-akiniton"},"details":{"results_root_path":"/property/results","single_result_url":"https://www.xe.gr/property/results/single_result","get_note_url":"https://www.xe.gr/account/property_notes/:id","add_note_url":"https://www.xe.gr/account/property_notes/:id/add","create_note_url":"https://www.xe.gr/account/property_notes","remove_note_url":"https://www.xe.gr/account/property_notes/:id/remove","contact_details_url":"https://www.xe.gr/services/property_contact_details/:id","contact_action_url":"https://www.xe.gr/services/property_contact_details","report_action_url":"https://www.xe.gr/services/reports","terms_url":"https://support.xe.gr/el/articles/364832-όροι-χρήσης","privacy_policy_url":"https://support.xe.gr/el/articles/1941936-πολιτική-δεδομένων"}}' data-map-token="eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjdITUZRNDU2U1AifQ.eyJpc3MiOiJSNEg5N1JINUZaIiwiaWF0IjoxNjQ1MTgxODA4LCJleHAiOjE2NzY1MDU2MDAsIm9yaWdpbiI6Imh0dHBzOi8vd3d3LnhlLmdyIn0.oY1z6-aPDyVOOo2GU04EapQviOOw4Bq4lT4SHB3hhE0OxiXMC8c5egHSENRdgw-iNxiXT_8X1rDzpUh3JyVgQQ" data-my-menu='[["Οι αγγελίες μου", "https://my.xe.gr/app/mylists/listings?activeAds&amp;from=menu"], ["Οι αναζητήσεις μου", "https://www.xe.gr/my-saved-searches.html?from= menu"], ["Οι λίστες μου", "https://www.xe.gr/my-lists.html?from= menu"], ["Οι σημειώσεις μου", "https://www.xe.gr/my-notes.html?from= menu"]]' data-property-initialization-data='{"secondary_filters":{"characteristics":[{"name":"is_furnished","text":"Επιπλωμένο","id":"is-furnished","value":"true","component_id":"is_furnished"},{"name":"has_parking","text":"Parking","id":"has-parking-area","value":"true","component_id":"has_parking_area"},{"name":"has_private_terrace","text":"Ταράτσα ιδιόκτητη","id":"has-private-terrace","value":"true","component_id":"has_private_terrace"},{"name":"has_autonomous_heating","text":"Αυτόνομη θέρμανση","id":"has-autonomous-heating","value":"true","component_id":"has_autonomous_heating"},{"name":"has_central_heating","text":"Κεντρική θέρμανση","id":"has-central-heating","value":"true","component_id":"has_central_heating"},{"name":"has_natural_gas","text":"Φυσικό αέριο","id":"has-natural-gas","value":"true","component_id":"has_natural_gas"},{"name":"has_aircondition","text":"Κλιματισμός","id":"has-air-conditioner","value":"true","component_id":"has_air_conditioner"},{"name":"has_tents","text":"Τέντες","id":"has-tents","value":"true","component_id":"has_tents"},{"name":"building_condition_options[]","text":"Νεόδμητο","id":"building-condition-option-newly-build","value":"NEWBUILT","component_id":"building_condition_new"},{"name":"has_secure_door","text":"Πόρτα ασφαλείας","id":"has-secure-door","value":"true","component_id":"has_secure_door"},{"name":"has_fireplace","text":"Τζάκι","id":"has-fireplace","value":"true","component_id":"has_fireplace"},{"name":"has_pool","text":"Πισίνα","id":"has-pool","value":"true","component_id":"has_pool"},{"name":"has_garden","text":"Κήπος","id":"has-garden","value":"true","component_id":"has_garden"},{"name":"is_suitable_for_students","text":"Ιδανικό για φοιτητές","id":"is-suitable-for-students","value":"true","component_id":"is_suitable_for_students"},{"name":"with_no_communal_charge","text":"Χωρίς κοινόχρηστα","id":"with-no-communal-charge","value":"true","component_id":"communal_charge_included"},{"name":"has_storage","text":"Με αποθήκη","id":"has-storage-space","value":"true","component_id":"has_storage_space"},{"name":"has_solar_boiler","text":"Ηλιακός θερμοσίφωνας","id":"has-solar-boiler","value":"true","component_id":"has_solar_water_heater"},{"name":"semi_open_spaces","text":"Ημιυπαίθριοι χώροι","id":"semi-open-spaces","value":"true","component_id":"has_semi_open_space"},{"name":"has_attic","text":"Πατάρι","id":"has-attic","value":"true","component_id":"has_attic"},{"name":"has_loading_ramp","text":"Ράμπα εκφόρτωσης","id":"has-loading-ramp","value":"true","component_id":"has_loading_ramp"},{"name":"has_electric_parking_door","text":"Ηλεκτρική πόρτα","id":"has-electric-parking-door","value":"true","component_id":"has_electric_parking_door"},{"name":"has_alarm","text":"Συναγερμός","id":"has-alarm","value":"true","component_id":"has_alarm"},{"name":"is_whole_land","text":"Άρτιο","id":"is-whole-land","value":"true","component_id":"is_whole_land"},{"name":"land_is_buildable","text":"Οικοδομήσιμο","id":"land-is-buildable","value":"true","component_id":"is_buildable"},{"name":"has_build_license","text":"Με άδεια οικοδομής","id":"has-build-license","value":"true","component_id":"has_build_license"},{"name":"has_building","text":"Κτίσμα","id":"has-building","value":"true","component_id":"has_building"},{"name":"is_suitable_for_holiday_residence","text":"Κατάλληλο για εξοχική κατοικία","id":"is_suitable_for_holiday_residence","value":"true","component_id":"is_suitable_for_holiday_residence"},{"name":"building_orientation_options[]","text":"Προσόψεως","id":"building-orientation-options-front-face","value":"facade","component_id":"orientation_facade"},{"name":"building_orientation_options[]","text":"Γωνιακό","id":"building-orientation-options-angular","value":"angular","component_id":"orientation_angular"},{"name":"building_orientation_options[]","text":"Εσωτερικό","id":"building-orientation-options-interior","value":"internal","component_id":"orientation_internal"},{"name":"city_plan_options[]","text":"Εντός σχεδίου","id":"building-type-option-city-plan-in","value":"included","component_id":"city_plan_in"},{"name":"city_plan_options[]","text":"Εκτός σχεδίου","id":"building-type-option-city-plan-out","value":"not-included","component_id":"city_plan_out"},{"name":"city_plan_options[]","text":"Υπό ένταξη σε σχέδιο","id":"building-type-option-city-plan-under-accession","value":"to-be-included","component_id":"city_plan_under_accession"}],"availability":[{"name":"building_availability_options[]","text":"Ελεύθερο","id":"building-availability-option-free","value":"AVAILABLE","component_id":"availability_free"},{"name":"building_availability_options[]","text":"Μισθωμένο","id":"building-availability-option-rented","value":"OCCUPATED","component_id":"availability_rented"}],"type":[{"name":"building_type_options[]","text":"Κατάστημα","id":"building-type-option-retail","value":"retail","component_id":"building_type_retail"},{"name":"building_type_options[]","text":"Γραφείο","id":"building-type-option-office","value":"office","component_id":"building_type_office"},{"name":"building_type_options[]","text":"Κτίριο","id":"building-type-option-building","value":"building","component_id":"building_type_building"},{"name":"building_type_options[]","text":"Βιομηχανικός χώρος","id":"building-type-option-industrial","value":"industrial","component_id":"building_type_industrial"},{"name":"building_type_options[]","text":"Αποθήκη","id":"building-type-option-storage","value":"storage","component_id":"building_type_storage"},{"name":"building_type_options[]","text":"Βιοτεχνικός χώρος","id":"building-type-option-craft-space","value":"craft-space","component_id":"building_type_craft_space"},{"name":"building_type_options[]","text":"Εκθεσιακός χώρος","id":"building-type-option-gallery","value":"gallery","component_id":"building_type_gallery"},{"name":"building_type_options[]","text":"Χώρος","id":"building-type-option-space","value":"space","component_id":"building_type_space"},{"name":"building_type_options[]","text":"Διαμέρισμα","id":"building-type-option-professional-apartment","value":"professional-apartment","component_id":"building_type_professional_apartment"},{"name":"building_type_options[]","text":"Ανοιχτό parking","id":"building-type-option-parking-open","value":"open-parking","component_id":"parking_type_open"},{"name":"building_type_options[]","text":"Κλειστό parking","id":"building-type-option-parking-closed","value":"closed-parking","component_id":"parking_type_closed"},{"name":"building_type_options[]","text":"Parking πιλοτής","id":"building-type-option-parking-stilt","value":"parking-stilt","component_id":"parking_type_stilt"},{"name":"building_type_options[]","text":"Υπόγειο parking","id":"building-type-option-parking-underground","value":"underground-parking","component_id":"parking_type_underground"},{"name":"building_type_options[]","text":"Οικόπεδο","id":"building-type-option-plot","value":"plot","component_id":"land_type_plot"},{"name":"building_type_options[]","text":"Έκταση","id":"building-type-option-area","value":"area","component_id":"land_type_area"},{"name":"building_type_options[]","text":"Αγροτεμάχιο","id":"building-type-option-plot-of-land","value":"plot-of-land","component_id":"land_type_plot_of_land"},{"name":"building_type_options[]","text":"Τάφος","id":"building-type-option-tomb","value":"tomb","component_id":"misc_type_tomb"},{"name":"building_type_options[]","text":"Αέρας κατοικίας","id":"building-type-option-building-air","value":"building-air","component_id":"misc_type_building_air"},{"name":"building_type_options[]","text":"Διαμέρισμα","id":"building-type-option-apartment","value":"apartment","component_id":"building_type_apartment"},{"name":"building_type_options[]","text":"Μονοκατοικία","id":"building-type-option-house","value":"house","component_id":"building_type_house"},{"name":"building_type_options[]","text":"Μεζονέτα","id":"building-type-option-maisonette","value":"maisonette","component_id":"building_type_maisonette"}],"listing_characteristics":[{"name":"has_reduced_price","text":"Με μειωμένη τιμή","id":"has-reduced-price","value":"true","component_id":"has_reduced_price"},{"name":"has_photos","text":"Με φωτογραφίες","id":"has-photos","value":"true","component_id":"has_photos"},{"name":"has_videos","text":"Με βίντεο","id":"has-videos","value":"true","component_id":"has_videos"},{"name":"publication_origins[]","text":"Από ιδιώτες","id":"publication-origin-seller","value":"0","component_id":"publication_origin_seller"},{"name":"publication_origins[]","text":"Από επαγγελματίες","id":"publication-origin-agent","value":"1","component_id":"publication_origin_agent"}],"ad_age_options":[["24 ώρες","1"],["3 ημέρες","3"],["10 ημέρες","10"],["30 ημέρες","30"]]},"transaction_names":[["Ενοικίαση","rent"],["Πώληση","buy"],["Αντιπαροχή","valuable-consideration"],["Ανταλλαγή","exchange"],["Δωρεά","donation"]],"property_item_types":[["Κατοικία","re_residence","xe xe-house-detached"],["Επαγγελ. χώρος","re_prof","xe xe-commercial-building"],["Γη","re_land","xe xe-land"],["Parking","re_parking","xe xe-parking-area"],["Διάφορα ακίνητα","re_misc","xe-property-miscellaneous"]],"sorting_options":[["Προτεινόμενη",""],["Τιμή (φθίνουσα)","price_desc"],["Τιμή (αύξουσα)","price_asc"],["Τιμή/τ.μ. (φθίνουσα)","price_per_unit_area_desc"],["Τιμή/τ.μ. (αύξουσα)","price_per_unit_area_asc"],["Εμβαδόν (φθίνον)","property_area_in_sq_m_desc"],["Εμβαδόν (αύξον)","property_area_in_sq_m_asc"],["Πρόσφατη δημοσίευση","create_desc"],["Πρόσφατη ενημέρωση","update_desc"]],"bedrooms_options":[{"name":"Χωρίς προτίμηση","value":""},{"name":"1","value":"1"},{"name":"2","value":"2"},{"name":"3","value":"3"},{"name":"4","value":"4"},{"name":"5","value":"5"},{"name":"6+","value":"6"}],"floors_options":[{"name":"Χωρίς προτίμηση","value":""},{"name":"Υπόγειο","value":"S1"},{"name":"Ημιυπόγειο","value":"SH"},{"name":"Ισόγειο","value":"L0"},{"name":"Υπερυψωμένο","value":"LHH"},{"name":"Ημιώροφος","value":"LH"},{"name":"1ος","value":"L1"},{"name":"2ος","value":"L2"},{"name":"3ος","value":"L3"},{"name":"4ος","value":"L4"},{"name":"5ος","value":"L5"},{"name":"6ος","value":"L6"},{"name":"7ος","value":"L7"},{"name":"8ος+","value":"L8"}],"parking_floors_options":[{"name":"Χωρίς προτίμηση","value":""},{"name":"Ισόγειο","value":"GROUND"},{"name":"1ος","value":"LEV_1"},{"name":"2ος","value":"LEV_2"},{"name":"3ος","value":"LEV_3"},{"name":"4ος","value":"LEV_4"},{"name":"Επίπεδο: -1","value":"SUB_1"},{"name":"Επίπεδο: -2","value":"SUB_2"},{"name":"Επίπεδο: -3","value":"SUB_3"},{"name":"Επίπεδο: -4","value":"SUB_4"}],"energy_class_options":[{"name":"Χωρίς προτίμηση","value":""},{"name":"Α+","value":"A_PLUS"},{"name":"Α","value":"A"},{"name":"Β+","value":"B_PLUS"},{"name":"Β","value":"B"},{"name":"Γ","value":"C"},{"name":"Δ","value":"D"},{"name":"Ε","value":"E"},{"name":"Ζ","value":"Z"},{"name":"Η","value":"H"},{"name":"Εξαιρείται","value":"NOT_APPLICABLE"}],"report_ad_options":[{"label":"Δεν είναι πλέον διαθέσιμη","reason":"UNAVAILABLE"},{"label":"Έχει ψευδή τιμή","reason":"FALSE_PRICE"},{"label":"Έχει παραπλανητικές πληροφορίες","reason":"MISLEADING_INFO"},{"label":"Είναι επαγγελματίας και εμφανίζεται ως ιδιώτης ","reason":"PROFESSIONAL"},{"label":"Άλλο","reason":"OTHER"}]}' data-property-selected-values='{"pagination":{"total_results":1748,"current_page":52,"total_pages":52,"additional_results_exist":false,"total_results_with_reduced_price":25,"page_size":34},"item_type":"re_residence","transaction_name":"buy","sorting":null,"selected_locations":[{"geo_lat_from":35.69569454391381,"geo_lng_from":26.35251946094442,"geo_lat_to":34.80088339379667,"geo_lng_to":23.47162050282608,"center_geo_lng":24.8092691,"center_geo_lat":35.240117,"locality":null,"name":"Κρήτη","region":null,"formatted_address":"Κρήτη, Ελλάδα","geo_place_id":"ChIJoZh9gi_-mhQRMMa54iy9AAE","requested_geo_place_id":"ChIJoZh9gi_-mhQRMMa54iy9AAE"}],"viewport":{"geo_lat_from":35.69569454391381,"geo_lng_from":26.35251946094442,"geo_lat_to":34.80088339379667,"geo_lng_to":23.47162050282608},"supported_filters":{"primary":["price","area_in_sq_m","number_of_bedrooms"],"secondary":["construction_year","price_per_unit_area","number_of_bathrooms","floor_level","energy_class","is_furnished","has_parking_area","has_private_terrace","has_autonomous_heating","has_central_heating","has_natural_gas","has_air_conditioner","has_tents","building_condition_new","has_secure_door","has_fireplace","has_pool","has_garden","is_suitable_for_students","communal_charge_included","has_storage_space","has_solar_water_heater","has_semi_open_space","orientation_facade","orientation_angular","orientation_internal","building_type_apartment","building_type_house","building_type_maisonette","availability_free","availability_rented","has_reduced_price","has_photos","has_videos","publication_origin_seller","publication_origin_agent","ad_age","free_text","is_suitable_for_holiday_residence"]},"page_url":"https://www.xe.gr/property/results?geo_place_ids%5B%5D=ChIJoZh9gi_-mhQRMMa54iy9AAE\u0026item_type=re_residence\u0026page=52\u0026transaction_name=buy","similar_searches":[{"url":"https://www.xe.gr/property/r/poliseis-diamerismaton/ChIJoZh9gi_-mhQRMMa54iy9AAE_krhth","text":"Πωλήσεις διαμερισμάτων Κρήτη"},{"url":"https://www.xe.gr/property/r/poliseis-monokatoikion/ChIJoZh9gi_-mhQRMMa54iy9AAE_krhth","text":"Πωλήσεις μονοκατοικιών Κρήτη"},{"url":"https://www.xe.gr/property/r/poliseis-mezoneton/ChIJoZh9gi_-mhQRMMa54iy9AAE_krhth","text":"Πωλήσεις μεζονετών Κρήτη"},{"url":"https://www.xe.gr/property/r/poliseis-gis-oikopedon/ChIJoZh9gi_-mhQRMMa54iy9AAE_krhth","text":"Πωλήσεις γης Κρήτη"},{"url":"https://www.xe.gr/property/r/poliseis-allon-akiniton/ChIJoZh9gi_-mhQRMMa54iy9AAE_krhth","text":"Πωλήσεις διαφόρων ακινήτων Κρήτη"},{"url":"https://www.xe.gr/property/r/poliseis-parking/ChIJoZh9gi_-mhQRMMa54iy9AAE_krhth","text":"Πωλήσεις parking Κρήτη"},{"url":"https://www.xe.gr/property/r/poliseis-epaggelmatikon-xoron/ChIJoZh9gi_-mhQRMMa54iy9AAE_krhth","text":"Πωλήσεις επαγγελματικών χώρων Κρήτη"}],"popular_searches":[{"text":"Ενοικιάσεις κατοικιών Αθήνα","url":"https://www.xe.gr/property/r/enoikiaseis-katoikion/ChIJ8UNwBh-9oRQR3Y1mdkU1Nic_athhna"},{"text":"Ενοικιάσεις κατοικιών Περιστέρι","url":"https://www.xe.gr/property/r/enoikiaseis-katoikion/ChIJTazECEejoRQRYRYsuxSJ348_peristeri"},{"text":"Ενοικιάσεις κατοικιών Αιγάλεω","url":"https://www.xe.gr/property/r/enoikiaseis-katoikion/ChIJvUGcxaS8oRQRhQVsOC1EXzw_aigalew"},{"text":"Ενοικιάσεις κατοικιών Ίλιον","url":"https://www.xe.gr/property/r/enoikiaseis-katoikion/ChIJZfP8CqijoRQRoHm54iy9AAQ_ilion"},{"text":"Ενοικιάσεις κατοικιών Πειραιάς","url":"https://www.xe.gr/property/r/enoikiaseis-katoikion/ChIJRzGst-u7oRQR9_0w_5XaINg_peiraias"},{"text":"Ενοικιάσεις κατοικιών Πετρούπολη","url":"https://www.xe.gr/property/r/enoikiaseis-katoikion/ChIJ46nkZnejoRQRhcY8oQ1xtI4_petroypolh"},{"text":"Ενοικιάσεις κατοικιών Χαϊδάρι","url":"https://www.xe.gr/property/r/enoikiaseis-katoikion/ChIJIZwoz9W6oRQREHu54iy9AAQ_chaidari"},{"text":"Ενοικιάσεις κατοικιών Ηλιούπολη","url":"https://www.xe.gr/property/r/enoikiaseis-katoikion/ChIJ6QytjI69oRQRmVCWR9qyKrA_hlioypolh"},{"text":"Ενοικιάσεις κατοικιών Θεσσαλονίκη","url":"https://www.xe.gr/property/r/enoikiaseis-katoikion/ChIJ7eAoFPQ4qBQRqXTVuBXnugk_thessalonikh"},{"text":"Ενοικιάσεις κατοικιών Χαλκίδα","url":"https://www.xe.gr/property/r/enoikiaseis-katoikion/ChIJSxfWwksWoRQRBMk0e18KCzg_chalkida"},{"text":"Ενοικιάσεις κατοικιών Πάτρα","url":"https://www.xe.gr/property/r/enoikiaseis-katoikion/ChIJLe0kpZk1XhMRoIy54iy9AAQ_patra"},{"text":"Ενοικιάσεις κατοικιών Καλαμάτα","url":"https://www.xe.gr/property/r/enoikiaseis-katoikion/ChIJKXhLYpmwYRMRnl9ice2VH_w_kalamata"},{"text":"Ενοικιάσεις κατοικιών Λάρισα","url":"https://www.xe.gr/property/r/enoikiaseis-katoikion/ChIJoUddWVyIWBMRMJy54iy9AAQ_larisa"},{"text":"Ενοικιάσεις κατοικιών Τρίκαλα","url":"https://www.xe.gr/property/r/enoikiaseis-katoikion/ChIJXy53IjMZWRMRwJ-54iy9AAQ_trikala"},{"text":"Πωλήσεις κατοικιών Αθήνα","url":"https://www.xe.gr/property/r/poliseis-katoikion/ChIJ8UNwBh-9oRQR3Y1mdkU1Nic_athhna"},{"text":"Πωλήσεις κατοικιών Περιστέρι","url":"https://www.xe.gr/property/r/poliseis-katoikion/ChIJTazECEejoRQRYRYsuxSJ348_peristeri"},{"text":"Πωλήσεις κατοικιών Σαλαμίνα","url":"https://www.xe.gr/property/r/poliseis-katoikion/ChIJIY13tzSxoRQRB-Qnu6NZIf0_salamina"},{"text":"Πωλήσεις κατοικιών Χαλκίδα","url":"https://www.xe.gr/property/r/poliseis-katoikion/ChIJSxfWwksWoRQRBMk0e18KCzg_chalkida"},{"text":"Πωλήσεις κατοικιών Πάτρα","url":"https://www.xe.gr/property/r/poliseis-katoikion/ChIJLe0kpZk1XhMRoIy54iy9AAQ_patra"},{"text":"Πωλήσεις κατοικιών Καλαμάτα","url":"https://www.xe.gr/property/r/poliseis-katoikion/ChIJKXhLYpmwYRMRnl9ice2VH_w_kalamata"},{"text":"Πωλήσεις κατοικιών Λάρισα","url":"https://www.xe.gr/property/r/poliseis-katoikion/ChIJoUddWVyIWBMRMJy54iy9AAQ_larisa"},{"text":"Ενοικιάσεις επαγγελματικών χώρων Περιστέρι","url":"https://www.xe.gr/property/r/enoikiaseis-epaggelmatikon-xoron/ChIJTazECEejoRQRYRYsuxSJ348_peristeri"},{"text":"Ενοικιάσεις καταστημάτων Γαλάτσι","url":"https://www.xe.gr/property/r/enoikiaseis-katastimaton/ChIJLbYjnoSioRQRGDYRmwa6d6M_galatsi"},{"text":"Πωλήσεις οικοπέδων  Σαλαμίνα","url":"https://www.xe.gr/property/r/poliseis-oikopedon/ChIJIY13tzSxoRQRB-Qnu6NZIf0_salamina"},{"text":"Ενοικιάσεις parking Παγκράτι","url":"https://www.xe.gr/property/r/enoikiaseis-parking/ChIJy1stSUK9oRQRi9ObJcOmO20_pagkrati"}],"widgets":{"save_search_text":"Αποθήκευσε την αναζήτηση σου για να λαμβάνεις άμεσα ειδοποιήσεις για όλες τις νέες πωλήσεις κατοικιών που σε ενδιαφέρουν"}}' data-saved-search-data='{"button_title":{"close":"Κλείσιμο","cancel":"Aκύρωση","sign_in":"Σύνδεση","sign_in_for_saving_search":"Για να αποθηκεύσεις την αναζήτηση πρέπει πρώτα να συνδεθείς στον λογαριασμό σου.","save_search_and_alert":"Αποθήκευση αναζήτησης \u0026 ειδοποίηση","save_and_alert":"Αποθήκευση αναζήτησης","saved_search":"Αποθηκευμένη","title":"Τίτλος αναζήτησης","notification_frequency":"Συχνότητα ειδοποιήσεων","no_alert":"Xωρίς ειδοποίηση","instant":"Άμεσα","premium":"Premium","every_3_days":"Κάθε 3 ημέρες","every_7_days":"Κάθε 7 ημέρες","channel":"Mέσο ειδοποιήσεων","email":"Email","save":"Αποθήκευση","your_search_has_been_saved":"Η αναζήτησή σου αποθηκεύτηκε με επιτυχία!","your_search_has_not_been_saved":"Η αναζήτησή σου δεν έχει αποθηκευτεί.","try_again":"Δοκίμασε ξανά.","placeholder":"Δώσε έναν τίτλο στην αναζήτηση σου","save_search_and_get_notified_for_new_listings":"Αποθήκευσε την αναζήτηση σου και λάβε ειδοποιήσεις για νέες αγγελίες ακινήτων"},"sign_in_url":"https://my.xe.gr/login","my_saved_searches_url":"https://www.xe.gr/my-saved-searches.html?from=menubar","save_search_url":"/account/property_saved_searches"}' data-sponsored-ads="[]" data-translations='{"header":{"xrush_eukairia":"Χρυσή Ευκαιρία - xe.gr","sign_in":"Σύνδεση","corporate_clients":"Εταιρικοί πελάτες","submit_an_ad":"Καταχώριση αγγελίας","register":"Εγγραφή","contact":"Επικοινωνία","log_out":"Αποσύνδεση","upgrade_to_premium":"Αναβάθμιση σε premium","search":"Αναζήτηση","select_area_placeholder":"Επιλογή περιοχής","select_area_placeholder_mobile":"Περιοχή","area_selection":"Επιλογή περιοχής","list_of_areas":"Λίστα περιοχών","no_area_selected_message":"Δοκίμασε ξανά πληκτρολογώντας τα πρώτα γράμματα της περιοχής και επιλέγοντας μία από τις προτάσεις που θα εμφανιστούν.","use_area_list":"Εναλλακτικά χρησιμοποίησε την αναλυτική \"Λίστα περιοχών\"","close":"Κλείσιμο","select_all":"Επιλογή όλων","clear_searched_areas":"Καθαρισμός επιλεγμένων περιοχών","max_number_of_searched_areas":"Έχετε φτάσει το μέγιστο αριθμό επιτρεπόμενων περιοχών προς αναζήτηση","areas":"περιοχές"},"grid":{"realtor_logo_title":"Δείτε όλες τις αγγελίες του επαγγελματία","sponsored_title":"Sponsored"},"pagination":{"next_page":"Επόμενη","previous_page":"Προηγούμενη","number_of_total_ads":"from_number-to_number από total_number  ακίνητα"},"sorting":{"sorting":"Ταξινόμηση"},"filters":{"price":"Τιμή","square_meters":"Τετραγωνικά","bedrooms":"Υπνοδωμάτια","bathrooms":"Μπάνια","floor":"Όροφος","energy_class":"Ενεργειακή Κλάση","from":"Από","to":"Έως","price_currency":"€","square_meter_unit":"τ.μ.","bedrooms_unit":"Υ/δ","more_filters":"Περισσότερα φίλτρα","more":"Περισσότερα","filters":"Φίλτρα","year_of_construction":"Έτος κατασκευής","price_per_unit_area":"Τιμή/τ.μ.","without_chosen":"Χωρίς προτίμηση","keywords":"Λέξεις κλειδιά","listing_characteristics":"Χαρακτηριστικά αγγελίας","characteristics":"Παροχές και χαρακτηριστικά ακινήτου","availability":"Διαθεσιμότητα","type":"Είδος","see_more":"Δες περισσότερα","see_less":"Δες λιγότερα","ad_age":"Ηλικία αγγελίας","clear":"Καθαρισμός","view_x_results":{"singular":"Προβολή X αποτέλεσμα","plural":"Προβολή X αποτελεσμάτων"},"x_results":{"singular":"X αποτέλεσμα","plural":"X αποτελέσματα"}},"no_results":{"no_results":"Δεν βρέθηκαν αποτελέσματα","adjust_search":"Άλλαξε τους όρους αναζήτησης σου ή δημιούργησε μία ειδοποίηση για να ενημερωθείς πρώτος, όταν εμφανιστούν αποτελέσματα με τα κριτήρια σου."},"save_search":{"close":"Κλείσιμο","cancel":"Aκύρωση","sign_in":"Σύνδεση","sign_in_for_saving_search":"Για να αποθηκεύσεις την αναζήτηση πρέπει πρώτα να συνδεθείς στον λογαριασμό σου.","save_search_and_alert":"Αποθήκευση αναζήτησης \u0026 ειδοποίηση","save_and_alert":"Αποθήκευση αναζήτησης","saved_search":"Αποθηκευμένη","title":"Τίτλος αναζήτησης","notification_frequency":"Συχνότητα ειδοποιήσεων","no_alert":"Xωρίς ειδοποίηση","instant":"Άμεσα","premium":"Premium","every_3_days":"Κάθε 3 ημέρες","every_7_days":"Κάθε 7 ημέρες","channel":"Mέσο ειδοποιήσεων","email":"Email","save":"Αποθήκευση","your_search_has_been_saved":"Η αναζήτησή σου αποθηκεύτηκε με επιτυχία!","your_search_has_not_been_saved":"Η αναζήτησή σου δεν έχει αποθηκευτεί.","try_again":"Δοκίμασε ξανά.","placeholder":"Δώσε έναν τίτλο στην αναζήτηση σου"},"up_modal":{"multiple_ads_title":"Πολλαπλές αγγελίες","ads_for_this_property":"Αγγελίες για αυτό το ακίνητο","offered_by_private_user":"Αγγελία ιδιώτη","professional_ad":"Αγγελία επαγγελματία","concern_a_different_property":"Η αγγελία αφορά διαφορετικό ακίνητο;","your_report_has_been_sent":"Η αναφορά σου στάλθηκε.","something_went_wrong":"Κάτι πήγε στραβά. Δοκίμασε ξανά.","hidden_duplicate_ads_info_message":"Για την εμφάνιση των πιο σχετικών αγγελιών, παραλείψαμε ορισμένα αποτελέσματα που μοιάζουν με αυτά που εμφανίζονται ήδη.","show_hidden_duplicate_ads":"Πάτησε εδώ για να δεις όλες τις αγγελίες για το συγκεκριμένο ακίνητο."},"map":{"search_this_area":"Αναζήτηση σε αυτήν την περιοχή","search_with_map":"Αναζήτηση με μετακίνηση του χάρτη"},"company_widget":{"golden_deal_title":"Χρυσή Ευκαιρία: το #1 στην αναζήτηση ακινήτων στην Ελλάδα","more_people_looking_description":"Περισσότεροι από 1,5εκ. άνθρωποι κάθε μήνα, αναζητούν το επόμενο τους σπίτι, κατάστημα, γραφείο, οικόπεδο στην Χρυσή Ευκαιρία, το #1 στην αναζήτηση ακινήτου. Με όλα τα ακίνητα της αγοράς, προβολή σε χάρτη, χωρίς διπλές και τριπλές αγγελίες για το ίδιο ακίνητο, έξυπνη ταξινόμηση και πολλές ακόμα μοναδικές δυνατότητες. "},"save_search_widget":{"title":"Θες να ενημερώνεσαι πρώτος για νέα ακίνητα;","save_search":"Αποθήκευση αναζήτησης"},"searches_widget":{"similar_title":"Σχετικές αναζητήσεις","popular_title":"Δημοφιλείς αναζητήσεις","see_more":"Δες περισσότερα","see_less":"Δες λιγότερα"},"hide_ads":{"close":"Κλείσιμο","ad_will_appear":"Η αγγελία θα εμφανίζεται στα αποτελέσματα αναζήτησης","ad_failed_to_be_viewed":"Η εμφάνιση της αγγελίας απέτυψε.","ad_will_not_appear":"Η αγγελία δεν θα εμφανίζεται στα αποτελέσματα αναζήτησης","ad_failed_to_be_hidden":"Η απόκρυψη της αγγελίας απέτυχε.","view":"Εμφάνιση","try_again":"Δοκίμασε ξανά.","hide":"Απόκρυψη"},"favorite_ads":{"close":"Κλείσιμο","cancel":"Aκύρωση","sign_in":"Σύνδεση","sign_in_for_saving_lists":"Για να αποθηκεύσετε την αγγελία σε λίστα πρέπει να συνδεθείτε σε λογαριασμό του xe.gr","save_to_list":"Αποθήκευση σε λίστα","create_list":"Δημιουργία νέας λίστας","edit_lists":"Διαχείριση λιστών","ads":"αγγελίες","ad":"αγγελία","list_doesnt_created":"Η λίστα δεν έχει δημιουργηθεί","lists_max_number_reached":"Έχεις φτάσει τον μέγιστο αριθμό επιτρεπόμενων λιστών.","list_is_full":"Η λίστα είναι πλήρης","full_list_message":"Έχεις φτάσει τον μέγιστο αριθμό επιτρεπόμενων αγγελιών ανά λίστα.","save_ad":"Αποθήκευση αγγελίας","ad_was_saved":"Η αγγελία αποθηκεύτηκε επιτυχώς","ad_failed_to_be_saved":"Η αγγελία δεν αποθηκεύτηκε.","ad_was_removed":"Η αγγελία αφαιρέθηκε από τη λίστα","ad_failed_to_be_removed":"Η αγγελία δεν αφαιρέθηκε από τη λίστα.","list_failed_to_be_created":"Η λίστα δεν δημιουργήθηκε.","try_again":"Δοκίμασε ξανά.","create":"Δημιουργία","placeholder":"Δώσε ένα τίτλο στην λίστα σου"},"report_ads":{"report_btn":"Αναφορά","report_title":"Αναφορά αγγελίας","optional_text":"προαιρετικό","contact_email":"Email επικοινωνίας","report_text":"Τι θα ήθελες να αναφέρεις σχετικά με την αγγελία;","more_details":"Δώσε μας περισσότερες λεπτομέρειες","terms_of_use":"Όρους Χρήσης","data_policy":"Πολιτική δεδομένων","submit_text":"Επιλέγοντας \"Υποβολή\" αποδέχεσαι τους %{link} και την %{link}. Η αναφορά σου θα αποσταλεί στην ΧΕ και στον αγγελιοδότη. Το email επικοινωνίας δεν προωθείται στον αγγελιοδότη και θα χρησιμοποιηθεί μόνο για διευκρινίσεις και ενημερώσεις από την ΧΕ.","submit_button":"Υποβολή","success_message":"Η αναφορά σου στάλθηκε","failure_message":"Η αναφορά σου δεν στάλθηκε.","try_again":"Δοκίμασε ξανά."},"no_result":{"no_result_title":"Η αγγελία που ψάχνεις δεν υπάρχει πλέον","no_result_text":"Μπορείς να δεις σχετικά αποτελέσματα ή να κάνεις μια νέα αναζήτηση"},"market_state_widget":{"title":"Θες να μάθεις τις τιμές και τις τάσεις της αγοράς ακινήτων;","text":"Δες τους πίνακες με τη μέση τιμή ανά τ.μ. καθώς και τον αριθμό των διαθέσιμων ακινήτων ανά περιοχή τόσο για το τρέχον έτος όσο και σε σύγκριση με προηγούμενα.","button_text":"Δες τις τιμές της αγοράς ακινήτων εδώ"},"premium_popup":{"title":"Υπηρεσία premium","promotional_text":"Δοκίμασε σε προνομιακή τιμή τις υπηρεσίες της Premium συνδρομής από","price_per_day":"0,44€ / ημέρα","instant_alerts":"Άμεσες ειδοποιήσεις","personal_notes":"Προσωπικές σημειώσεις","conceal_ads":"Απόκρυψη αγγελιών","more_filters":"Περισσότερα φίλτρα","upgrade_your_account":"Αναβάθμιση λογαριασμού","have_purchased_premium_subscription":"Έχεις ήδη Premium συνδρομή;","expired_premium_text":"Η Premium συνδρομή σου έληξε στις "},"title":{"subtitle_total_results":"1.748 ακίνητα με τα επιλεγμένα κριτήρια","subtitle_reduced_price":"25 είναι με μειωμένη τιμή","property_results_title":"Πωλήσεις κατοικιών στην περιοχή Κρήτη"},"details":{"details":{"ad_details":"Στοιχεία αγγελίας","see_more":"Δες περισσότερα","see_less":"Δες λιγότερα"},"gallery":{"video_title":"Βίντεο αγγελίας","photos_title":"Φωτογραφίες αγγελίας","realtor_logo_title":"Δείτε όλες τις αγγελίες του επαγγελματία"},"statistics":{"creation_date":"Δημιουργία","modification_date":"Τροποποίηση","views":"Επισκέψεις","saves":"Αποθηκεύσεις","customer_ref_id":"Κωδικός αγγελίας"},"owner_info":{"number_of_ads":"Συνολικές αγγελίες:","partner_since":"Συνεργάτης από:"},"notes":{"notes_title":"Οι σημειώσεις μου","notes_info_text":"Οι σημειώσεις είναι προσωπικές και δεν εμφανίζονται δημόσια","delete_note":"Διαγραφή σημείωσης","note_text_counter":":count / :max χαρακτήρες","note_saved_success":"Οι αλλαγές σου αποθηκεύτηκαν","note_saved_error":"Οι αλλαγές σου δεν αποθηκεύτηκαν","try_again":"Δοκίμασε ξανά."},"map":{"map_title":"Τοποθεσία ακινήτου","map_info_text":"Η τοποθεσία εμφανίζεται κατά προσέγγιση"},"call_action":{"call":"Κλήση","view_phone":"Προβολή τηλεφώνου","contact_hours":"Ώρες επικοινωνίας","from":"Από","to":"Έως","contact_numbers":"Τηλέφωνα επικοινωνίας","offered_by_private_user":"Αγγελία ιδιώτη","professional_ad":"Αγγελία επαγγελματία"},"contact_action":{"name":"Όνομα","email":"Email","phone":"Τηλέφωνο","free_text_placeholder":"Γράψε εδώ τι θα ήθελες να μάθεις για το ακίνητο","terms_of_use":"Όρους Χρήσης","data_policy":"Πολιτική Δεδομένων","terms_and_policy_text":"Πατώντας το κουμπί Αποστολή μηνύματος, αποδέχεσαι τους %{link} και την %{link}","send_message":"Αποστολή μηνύματος","message":"Μήνυμα","success_message":"Το μήνυμα σου στάλθηκε","failure_message":"Το μήνυμα σου δεν στάλθηκε.","try_again":"Δοκίμασε ξανά."},"report_ads":{"report_btn":"Αναφορά","report_title":"Αναφορά αγγελίας","optional_text":"προαιρετικό","contact_email":"Email επικοινωνίας","report_text":"Τι θα ήθελες να αναφέρεις σχετικά με την αγγελία;","more_details":"Δώσε μας περισσότερες λεπτομέρειες","terms_of_use":"Όρους Χρήσης","data_policy":"Πολιτική δεδομένων","submit_text":"Επιλέγοντας \"Υποβολή\" αποδέχεσαι τους %{link} και την %{link}. Η αναφορά σου θα αποσταλεί στην ΧΕ και στον αγγελιοδότη. Το email επικοινωνίας δεν προωθείται στον αγγελιοδότη και θα χρησιμοποιηθεί μόνο για διευκρινίσεις και ενημερώσεις από την ΧΕ.","submit_button":"Υποβολή","success_message":"Η αναφορά σου στάλθηκε","failure_message":"Η αναφορά σου δεν στάλθηκε.","try_again":"Δοκίμασε ξανά."}}}' data-user='{"logged_in":null,"username":null,"email":null,"is_premium":null,"expired_premium":null}' data-visible-ad="null" id="application_container">
+    <header class="header-navigation-bar">
+     <div class="header-navigation-bar-wrapper">
+      <div class="grid-x align-justify">
+       <div class="grid-x align-middle">
+        <ul class="navigation-bar-list grid-x align-middle">
+         <li class="navigation-bar-item navigation-bar-logo">
+          <a class="header-logo" href="/">
+           <img alt="Χρυσή Ευκαιρία - xe.gr" height="41" src="https://rodeo.cdn.xe.gr/rodeo-static/packs/media/images/brand_icons/logos/small-370accad31768c786dc2766a5dbc0ed0.svg" width="157"/>
+          </a>
+         </li>
+        </ul>
+       </div>
+      </div>
+     </div>
+    </header>
+    <div class="results-content grid-x">
+     <div class="cell large-6 tiny-12 results-grid-container">
+      <div class="property-results-title-container">
+       <h1>
+        Πωλήσεις κατοικιών στην περιοχή Κρήτη
+       </h1>
+       <h2>
+        1.748 ακίνητα με τα επιλεγμένα κριτήρια
+        <span>
+         -
+        </span>
+        25 είναι με μειωμένη τιμή
+       </h2>
+      </div>
+      <div class="filters-container">
+       <div class="main-filters-container">
+        <div class="grid-x">
+         <div class="range-filter-container cell first">
+          <button class="open-range-filter-btn" type="button">
+          </button>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="property-search-form grid-x grid-margin-x sort-filter">
+       <div class="cell property-sorting relative-wrapper simple-dropdown rounded">
+        <span>
+         Ταξινόμηση: Προτεινόμενα
+        </span>
+        <button aria-label="Show Dropdown" class="arrow-container" type="button">
+         <i class="xe xe-angle-arrow-down">
+         </i>
+        </button>
+       </div>
+      </div>
+      <div class="property-results-content">
+       <div class="property-result-list">
+        <div class="grid-x">
+        </div>
+       </div>
+       <div class="property-result-list">
+        <div class="grid-x">
+         <div class="cell huge-3 xxxlarge-4 large-6 medium-4 small-6 tiny-12">
+          <div class="common-property-ad">
+           <div class="property-ad-image-container normal-border">
+            <a href="https://www.xe.gr/property/d/poliseis-katoikion/735094560/hrakleio-145000-137?first_in_widget_ad_id=735094560&amp;rank_in_widget=1&amp;widget_name=search+results+list">
+             <div class="common-property-ad-image lazy-ad-image-container error-image">
+              <img alt="Πώληση κατοικίας Ηράκλειο Διαμέρισμα 137 τ.μ." loading="lazy" src="https://rodeo.cdn.xe.gr/rodeo-static/packs/media/images/icons/placeholder_real_estate-2a001bb3feca4d9f9097c0e4f7c29f6a.svg"/>
+             </div>
+            </a>
+            <div class="property-ad-realtor-image">
+             <img alt="Δείτε όλες τις αγγελίες του επαγγελματία" height="40" loading="lazy" src="https://a2.xe.gr/LOGO/1636111997982.jpg" width="40"/>
+            </div>
+           </div>
+           <div class="common-property-ad-body grid-y align-justify">
+            <a href="https://www.xe.gr/property/d/poliseis-katoikion/735094560/hrakleio-145000-137?first_in_widget_ad_id=735094560&amp;rank_in_widget=1&amp;widget_name=search+results+list">
+             <div class="common-property-ad-title">
+              <h3>
+               Διαμέρισμα 137 τ.μ.
+              </h3>
+             </div>
+             <div class="common-property-ad-price">
+              <span class="property-ad-price">
+               145.000 €
+              </span>
+              <span class="title-inline-seperator">
+               |
+              </span>
+              <span class="property-ad-price-per-sqm">
+               1.058 €/τ.μ.
+              </span>
+             </div>
+             <div class="common-property-ad-details grid-x">
+              <div class="property-ad-level-container">
+               <span class="property-ad-level">
+                Ισόγειο,
+               </span>
+               <span class="property-ad-level">
+                Υπερυψωμένο
+               </span>
+              </div>
+              <div class="grid-x property-ad-construction-year-container">
+               <i class="xe xe-house-construction">
+               </i>
+               <span>
+                ×1961
+               </span>
+              </div>
+             </div>
+             <div class="common-property-ad-area-container">
+              <span class="common-property-ad-address">
+               Ηράκλειο | Πώληση κατοικίας
+              </span>
+             </div>
+            </a>
+           </div>
+          </div>
+         </div>
+         <div class="cell huge-3 xxxlarge-4 large-6 medium-4 small-6 tiny-12">
+          <div class="common-property-ad">
+           <div class="property-ad-image-container normal-border">
+            <a href="https://www.xe.gr/property/d/poliseis-katoikion/654028306/chania-1000000-320?first_in_widget_ad_id=735094560&amp;rank_in_widget=2&amp;widget_name=search+results+list">
+             <div class="common-property-ad-image">
+              <picture>
+               <source srcset="https://a2.xe.gr/20200313/202510_772236_640_480.webp" type="image/webp"/>
+               <img alt="Πώληση κατοικίας Χανιά Μονοκατοικία 320 τ.μ." loading="lazy" src="https://a2.xe.gr/20200313/202510_772236_640_480.jpg"/>
+              </picture>
+             </div>
+            </a>
+            <div class="property-ad-realtor-image">
+             <img alt="Δείτε όλες τις αγγελίες του επαγγελματία" height="40" loading="lazy" src="https://a2.xe.gr/LOGO/1571380351243.jpg" width="40"/>
+            </div>
+           </div>
+           <div class="common-property-ad-body grid-y align-justify">
+            <a href="https://www.xe.gr/property/d/poliseis-katoikion/654028306/chania-1000000-320?first_in_widget_ad_id=735094560&amp;rank_in_widget=2&amp;widget_name=search+results+list">
+             <div class="common-property-ad-title">
+              <h3>
+               Μονοκατοικία 320 τ.μ.
+              </h3>
+             </div>
+             <div class="common-property-ad-price">
+              <span class="property-ad-price">
+               1.000.000 €
+              </span>
+              <span class="title-inline-seperator">
+               |
+              </span>
+              <span class="property-ad-price-per-sqm">
+               3.125 €/τ.μ.
+              </span>
+             </div>
+             <div class="common-property-ad-details grid-x">
+              <div class="property-ad-level-container">
+               <span class="property-ad-level">
+                Ισόγειο
+               </span>
+              </div>
+              <div class="grid-x property-ad-bedrooms-container">
+               <i class="xe xe-bedroom">
+               </i>
+               <span>
+                ×6
+               </span>
+              </div>
+             </div>
+             <div class="common-property-ad-area-container">
+              <span class="common-property-ad-address">
+               Χανιά | Πώληση κατοικίας
+              </span>
+             </div>
+            </a>
+           </div>
+          </div>
+         </div>
+         <div class="cell huge-3 xxxlarge-4 large-6 medium-4 small-6 tiny-12">
+          <div class="common-property-ad">
+           <div class="property-ad-image-container normal-border">
+            <a href="https://www.xe.gr/property/d/poliseis-katoikion/777243625/elos-110000-140?first_in_widget_ad_id=735094560&amp;rank_in_widget=3&amp;widget_name=search+results+list">
+             <div class="common-property-ad-image lazy-ad-image-container error-image">
+              <img alt="Πώληση κατοικίας Έλος Μονοκατοικία 140 τ.μ." loading="lazy" src="https://rodeo.cdn.xe.gr/rodeo-static/packs/media/images/icons/placeholder_real_estate-2a001bb3feca4d9f9097c0e4f7c29f6a.svg"/>
+             </div>
+            </a>
+           </div>
+           <div class="common-property-ad-body grid-y align-justify">
+            <a href="https://www.xe.gr/property/d/poliseis-katoikion/777243625/elos-110000-140?first_in_widget_ad_id=735094560&amp;rank_in_widget=3&amp;widget_name=search+results+list">
+             <div class="common-property-ad-title">
+              <h3>
+               Μονοκατοικία 140 τ.μ.
+              </h3>
+             </div>
+             <div class="common-property-ad-price">
+              <span class="property-ad-price">
+               110.000 €
+              </span>
+              <span class="title-inline-seperator">
+               |
+              </span>
+              <span class="property-ad-price-per-sqm">
+               786 €/τ.μ.
+              </span>
+             </div>
+             <div class="common-property-ad-details grid-x">
+              <div class="grid-x property-ad-bedrooms-container">
+               <i class="xe xe-bedroom">
+               </i>
+               <span>
+                ×3
+               </span>
+              </div>
+              <div class="grid-x property-ad-bathrooms-container">
+               <i class="xe xe-bathroom">
+               </i>
+               <span>
+                ×1
+               </span>
+              </div>
+              <div class="grid-x property-ad-construction-year-container">
+               <i class="xe xe-house-construction">
+               </i>
+               <span>
+                ×1920
+               </span>
+              </div>
+             </div>
+             <div class="common-property-ad-area-container">
+              <span class="common-property-ad-address">
+               Έλος | Πώληση κατοικίας
+              </span>
+             </div>
+            </a>
+           </div>
+          </div>
+         </div>
+         <div class="cell huge-3 xxxlarge-4 large-6 medium-4 small-6 tiny-12">
+          <div class="common-property-ad">
+           <div class="property-ad-image-container normal-border">
+            <a href="https://www.xe.gr/property/d/poliseis-katoikion/735094853/hrakleio-175000-156?first_in_widget_ad_id=735094560&amp;rank_in_widget=4&amp;widget_name=search+results+list">
+             <div class="common-property-ad-image lazy-ad-image-container error-image">
+              <img alt="Πώληση κατοικίας Ηράκλειο Διαμέρισμα 156 τ.μ." loading="lazy" src="https://rodeo.cdn.xe.gr/rodeo-static/packs/media/images/icons/placeholder_real_estate-2a001bb3feca4d9f9097c0e4f7c29f6a.svg"/>
+             </div>
+            </a>
+            <div class="property-ad-realtor-image">
+             <img alt="Δείτε όλες τις αγγελίες του επαγγελματία" height="40" loading="lazy" src="https://a2.xe.gr/LOGO/1636111997982.jpg" width="40"/>
+            </div>
+           </div>
+           <div class="common-property-ad-body grid-y align-justify">
+            <a href="https://www.xe.gr/property/d/poliseis-katoikion/735094853/hrakleio-175000-156?first_in_widget_ad_id=735094560&amp;rank_in_widget=4&amp;widget_name=search+results+list">
+             <div class="common-property-ad-title">
+              <h3>
+               Διαμέρισμα 156 τ.μ.
+              </h3>
+             </div>
+             <div class="common-property-ad-price">
+              <span class="property-ad-price">
+               175.000 €
+              </span>
+              <span class="title-inline-seperator">
+               |
+              </span>
+              <span class="property-ad-price-per-sqm">
+               1.122 €/τ.μ.
+              </span>
+             </div>
+             <div class="common-property-ad-details grid-x">
+              <div class="property-ad-level-container">
+               <span class="property-ad-level">
+                1ος
+               </span>
+              </div>
+              <div class="grid-x property-ad-construction-year-container">
+               <i class="xe xe-house-construction">
+               </i>
+               <span>
+                ×1961
+               </span>
+              </div>
+             </div>
+             <div class="common-property-ad-area-container">
+              <span class="common-property-ad-address">
+               Ηράκλειο | Πώληση κατοικίας
+              </span>
+             </div>
+            </a>
+           </div>
+          </div>
+         </div>
+         <div class="cell huge-3 xxxlarge-4 large-6 medium-4 small-6 tiny-12">
+          <div class="common-property-ad">
+           <div class="property-ad-image-container normal-border">
+            <a href="https://www.xe.gr/property/d/poliseis-katoikion/743862832/hrakleio-450000-320?first_in_widget_ad_id=735094560&amp;rank_in_widget=5&amp;widget_name=search+results+list">
+             <div class="common-property-ad-image lazy-ad-image-container error-image">
+              <img alt="Πώληση κατοικίας Ηράκλειο Κτίριο 320 τ.μ." loading="lazy" src="https://rodeo.cdn.xe.gr/rodeo-static/packs/media/images/icons/placeholder_real_estate-2a001bb3feca4d9f9097c0e4f7c29f6a.svg"/>
+             </div>
+            </a>
+            <div class="property-ad-realtor-image">
+             <img alt="Δείτε όλες τις αγγελίες του επαγγελματία" height="40" loading="lazy" src="https://a2.xe.gr/LOGO/1636111997982.jpg" width="40"/>
+            </div>
+           </div>
+           <div class="common-property-ad-body grid-y align-justify">
+            <a href="https://www.xe.gr/property/d/poliseis-katoikion/743862832/hrakleio-450000-320?first_in_widget_ad_id=735094560&amp;rank_in_widget=5&amp;widget_name=search+results+list">
+             <div class="common-property-ad-title">
+              <h3>
+               Κτίριο 320 τ.μ.
+              </h3>
+             </div>
+             <div class="common-property-ad-price">
+              <span class="property-ad-price">
+               450.000 €
+              </span>
+              <span class="title-inline-seperator">
+               |
+              </span>
+              <span class="property-ad-price-per-sqm">
+               1.406 €/τ.μ.
+              </span>
+             </div>
+             <div class="common-property-ad-details grid-x">
+              <div class="property-ad-level-container">
+               <span class="property-ad-level">
+                1ος,
+               </span>
+               <span class="property-ad-level">
+                2ος,
+               </span>
+               <span class="property-ad-level">
+                3ος
+               </span>
+              </div>
+             </div>
+             <div class="common-property-ad-area-container">
+              <span class="common-property-ad-address">
+               Ηράκλειο | Πώληση κατοικίας
+              </span>
+             </div>
+            </a>
+           </div>
+          </div>
+         </div>
+         <div class="cell huge-3 xxxlarge-4 large-6 medium-4 small-6 tiny-12">
+          <div class="common-property-ad">
+           <div class="property-ad-image-container normal-border">
+            <a href="https://www.xe.gr/property/d/poliseis-katoikion/743166853/chania-420000-140?first_in_widget_ad_id=735094560&amp;rank_in_widget=6&amp;widget_name=search+results+list">
+             <div class="common-property-ad-image">
+              <picture>
+               <source srcset="https://a2.xe.gr/20220606/143512_169746_640_480.webp" type="image/webp"/>
+               <img alt="Πώληση κατοικίας Χανιά Μονοκατοικία 140 τ.μ." loading="lazy" src="https://a2.xe.gr/20220606/143512_169746_640_480.jpg"/>
+              </picture>
+             </div>
+            </a>
+            <div class="property-ad-realtor-image">
+             <img alt="Δείτε όλες τις αγγελίες του επαγγελματία" height="40" loading="lazy" src="https://a2.xe.gr/LOGO/1573218467166.jpg" width="40"/>
+            </div>
+           </div>
+           <div class="common-property-ad-body grid-y align-justify">
+            <a href="https://www.xe.gr/property/d/poliseis-katoikion/743166853/chania-420000-140?first_in_widget_ad_id=735094560&amp;rank_in_widget=6&amp;widget_name=search+results+list">
+             <div class="common-property-ad-title">
+              <h3>
+               Μονοκατοικία 140 τ.μ.
+              </h3>
+             </div>
+             <div class="common-property-ad-price">
+              <span class="property-ad-price">
+               420.000 €
+              </span>
+              <span class="title-inline-seperator">
+               |
+              </span>
+              <span class="property-ad-price-per-sqm">
+               3.000 €/τ.μ.
+              </span>
+             </div>
+             <div class="common-property-ad-details grid-x">
+              <div class="property-ad-level-container">
+               <span class="property-ad-level">
+                Ισόγειο
+               </span>
+              </div>
+              <div class="grid-x property-ad-bedrooms-container">
+               <i class="xe xe-bedroom">
+               </i>
+               <span>
+                ×3
+               </span>
+              </div>
+              <div class="grid-x property-ad-bathrooms-container">
+               <i class="xe xe-bathroom">
+               </i>
+               <span>
+                ×1
+               </span>
+              </div>
+              <div class="grid-x property-ad-construction-year-container">
+               <i class="xe xe-house-construction">
+               </i>
+               <span>
+                ×1935
+               </span>
+              </div>
+             </div>
+             <div class="common-property-ad-area-container">
+              <span class="common-property-ad-address">
+               Χανιά | Πώληση κατοικίας
+              </span>
+             </div>
+            </a>
+           </div>
+          </div>
+         </div>
+         <div class="cell huge-3 xxxlarge-4 large-6 medium-4 small-6 tiny-12">
+          <div class="common-property-ad">
+           <div class="property-ad-image-container normal-border">
+            <a href="https://www.xe.gr/property/d/poliseis-katoikion/741951123/kounavi-20000-80?first_in_widget_ad_id=735094560&amp;rank_in_widget=7&amp;widget_name=search+results+list">
+             <div class="common-property-ad-image lazy-ad-image-container error-image">
+              <img alt="Πώληση κατοικίας Kounavi Μονοκατοικία 80 τ.μ." loading="lazy" src="https://rodeo.cdn.xe.gr/rodeo-static/packs/media/images/icons/placeholder_real_estate-2a001bb3feca4d9f9097c0e4f7c29f6a.svg"/>
+             </div>
+            </a>
+            <div class="property-ad-realtor-image">
+             <img alt="Δείτε όλες τις αγγελίες του επαγγελματία" height="40" loading="lazy" src="https://a2.xe.gr/LOGO/1636111997982.jpg" width="40"/>
+            </div>
+           </div>
+           <div class="common-property-ad-body grid-y align-justify">
+            <a href="https://www.xe.gr/property/d/poliseis-katoikion/741951123/kounavi-20000-80?first_in_widget_ad_id=735094560&amp;rank_in_widget=7&amp;widget_name=search+results+list">
+             <div class="common-property-ad-title">
+              <h3>
+               Μονοκατοικία 80 τ.μ.
+              </h3>
+             </div>
+             <div class="common-property-ad-price">
+              <span class="property-ad-price">
+               20.000 €
+              </span>
+              <span class="title-inline-seperator">
+               |
+              </span>
+              <span class="property-ad-price-per-sqm">
+               250 €/τ.μ.
+              </span>
+             </div>
+             <div class="common-property-ad-details grid-x">
+              <div class="property-ad-level-container">
+               <span class="property-ad-level">
+                Ισόγειο
+               </span>
+              </div>
+             </div>
+             <div class="common-property-ad-area-container">
+              <span class="common-property-ad-address">
+               Kounavi | Πώληση κατοικίας
+              </span>
+             </div>
+            </a>
+           </div>
+          </div>
+         </div>
+         <div class="cell huge-3 xxxlarge-4 large-6 medium-4 small-6 tiny-12">
+          <div class="common-property-ad">
+           <div class="property-ad-image-container normal-border">
+            <a href="https://www.xe.gr/property/d/poliseis-katoikion/630983347/chania-190000-145?first_in_widget_ad_id=735094560&amp;rank_in_widget=8&amp;widget_name=search+results+list">
+             <div class="common-property-ad-image">
+              <picture>
+               <source srcset="https://a2.xe.gr/20220606/143620_979485_640_480.webp" type="image/webp"/>
+               <img alt="Πώληση κατοικίας Χανιά Μονοκατοικία 145 τ.μ." loading="lazy" src="https://a2.xe.gr/20220606/143620_979485_640_480.jpg"/>
+              </picture>
+             </div>
+            </a>
+            <div class="property-ad-realtor-image">
+             <img alt="Δείτε όλες τις αγγελίες του επαγγελματία" height="40" loading="lazy" src="https://a2.xe.gr/LOGO/1573218467166.jpg" width="40"/>
+            </div>
+           </div>
+           <div class="common-property-ad-body grid-y align-justify">
+            <a href="https://www.xe.gr/property/d/poliseis-katoikion/630983347/chania-190000-145?first_in_widget_ad_id=735094560&amp;rank_in_widget=8&amp;widget_name=search+results+list">
+             <div class="common-property-ad-title">
+              <h3>
+               Μονοκατοικία 145 τ.μ.
+              </h3>
+             </div>
+             <div class="common-property-ad-price">
+              <span class="property-ad-price">
+               190.000 €
+              </span>
+              <span class="title-inline-seperator">
+               |
+              </span>
+              <span class="property-ad-price-per-sqm">
+               1.310 €/τ.μ.
+              </span>
+             </div>
+             <div class="common-property-ad-details grid-x">
+              <div class="property-ad-level-container">
+               <span class="property-ad-level">
+                1ος
+               </span>
+              </div>
+              <div class="grid-x property-ad-bedrooms-container">
+               <i class="xe xe-bedroom">
+               </i>
+               <span>
+                ×3
+               </span>
+              </div>
+              <div class="grid-x property-ad-bathrooms-container">
+               <i class="xe xe-bathroom">
+               </i>
+               <span>
+                ×2
+               </span>
+              </div>
+              <div class="grid-x property-ad-construction-year-container">
+               <i class="xe xe-house-construction">
+               </i>
+               <span>
+                ×1970
+               </span>
+              </div>
+             </div>
+             <div class="common-property-ad-area-container">
+              <span class="common-property-ad-address">
+               Χανιά | Πώληση κατοικίας
+              </span>
+             </div>
+            </a>
+           </div>
+          </div>
+         </div>
+         <div class="cell huge-3 xxxlarge-4 large-6 medium-4 small-6 tiny-12">
+          <div class="common-property-ad">
+           <div class="property-ad-image-container normal-border">
+            <a href="https://www.xe.gr/property/d/poliseis-katoikion/767973396/hrakleio-80000-96?first_in_widget_ad_id=735094560&amp;rank_in_widget=9&amp;widget_name=search+results+list">
+             <div class="common-property-ad-image lazy-ad-image-container error-image">
+              <img alt="Πώληση κατοικίας Ηράκλειο Μονοκατοικία 96 τ.μ." loading="lazy" src="https://rodeo.cdn.xe.gr/rodeo-static/packs/media/images/icons/placeholder_real_estate-2a001bb3feca4d9f9097c0e4f7c29f6a.svg"/>
+             </div>
+            </a>
+            <div class="property-ad-realtor-image">
+             <img alt="Δείτε όλες τις αγγελίες του επαγγελματία" height="40" loading="lazy" src="https://a2.xe.gr/LOGO/1622120851959.jpg" width="40"/>
+            </div>
+           </div>
+           <div class="common-property-ad-body grid-y align-justify">
+            <a href="https://www.xe.gr/property/d/poliseis-katoikion/767973396/hrakleio-80000-96?first_in_widget_ad_id=735094560&amp;rank_in_widget=9&amp;widget_name=search+results+list">
+             <div class="common-property-ad-title">
+              <h3>
+               Μονοκατοικία 96 τ.μ.
+              </h3>
+             </div>
+             <div class="common-property-ad-price">
+              <span class="property-ad-price">
+               80.000 €
+              </span>
+              <span class="title-inline-seperator">
+               |
+              </span>
+              <span class="property-ad-price-per-sqm">
+               833 €/τ.μ.
+              </span>
+             </div>
+             <div class="common-property-ad-details grid-x">
+              <div class="property-ad-level-container">
+               <span class="property-ad-level">
+                Ισόγειο
+               </span>
+              </div>
+              <div class="grid-x property-ad-bedrooms-container">
+               <i class="xe xe-bedroom">
+               </i>
+               <span>
+                ×2
+               </span>
+              </div>
+              <div class="grid-x property-ad-bathrooms-container">
+               <i class="xe xe-bathroom">
+               </i>
+               <span>
+                ×2
+               </span>
+              </div>
+              <div class="grid-x property-ad-construction-year-container">
+               <i class="xe xe-house-construction">
+               </i>
+               <span>
+                ×1960
+               </span>
+              </div>
+             </div>
+             <div class="common-property-ad-area-container">
+              <span class="common-property-ad-address">
+               Ηράκλειο | Πώληση κατοικίας
+              </span>
+             </div>
+            </a>
+           </div>
+          </div>
+         </div>
+         <div class="cell huge-3 xxxlarge-4 large-6 medium-4 small-6 tiny-12">
+          <div class="common-property-ad">
+           <div class="property-ad-image-container normal-border">
+            <a href="https://www.xe.gr/property/d/poliseis-katoikion/738072054/hrakleio-74000-55?first_in_widget_ad_id=735094560&amp;rank_in_widget=10&amp;widget_name=search+results+list">
+             <div class="common-property-ad-image lazy-ad-image-container error-image">
+              <img alt="Πώληση κατοικίας Ηράκλειο Μονοκατοικία 55 τ.μ." loading="lazy" src="https://rodeo.cdn.xe.gr/rodeo-static/packs/media/images/icons/placeholder_real_estate-2a001bb3feca4d9f9097c0e4f7c29f6a.svg"/>
+             </div>
+            </a>
+            <div class="property-ad-realtor-image">
+             <img alt="Δείτε όλες τις αγγελίες του επαγγελματία" height="40" loading="lazy" src="https://a2.xe.gr/LOGO/1636111997982.jpg" width="40"/>
+            </div>
+           </div>
+           <div class="common-property-ad-body grid-y align-justify">
+            <a href="https://www.xe.gr/property/d/poliseis-katoikion/738072054/hrakleio-74000-55?first_in_widget_ad_id=735094560&amp;rank_in_widget=10&amp;widget_name=search+results+list">
+             <div class="common-property-ad-title">
+              <h3>
+               Μονοκατοικία 55 τ.μ.
+              </h3>
+             </div>
+             <div class="common-property-ad-price">
+              <span class="property-ad-price">
+               74.000 €
+              </span>
+              <span class="title-inline-seperator">
+               |
+              </span>
+              <span class="property-ad-price-per-sqm">
+               1.345 €/τ.μ.
+              </span>
+             </div>
+             <div class="common-property-ad-details grid-x">
+              <div class="property-ad-level-container">
+               <span class="property-ad-level">
+                Ισόγειο
+               </span>
+              </div>
+              <div class="grid-x property-ad-bedrooms-container">
+               <i class="xe xe-bedroom">
+               </i>
+               <span>
+                ×1
+               </span>
+              </div>
+              <div class="grid-x property-ad-bathrooms-container">
+               <i class="xe xe-bathroom">
+               </i>
+               <span>
+                ×1
+               </span>
+              </div>
+             </div>
+             <div class="common-property-ad-area-container">
+              <span class="common-property-ad-address">
+               Ηράκλειο | Πώληση κατοικίας
+              </span>
+             </div>
+            </a>
+           </div>
+          </div>
+         </div>
+         <div class="cell huge-3 xxxlarge-4 large-6 medium-4 small-6 tiny-12">
+          <div class="common-property-ad">
+           <div class="property-ad-image-container normal-border">
+            <a href="https://www.xe.gr/property/d/poliseis-katoikion/774674562/hrakleio-220-28?first_in_widget_ad_id=735094560&amp;rank_in_widget=11&amp;widget_name=search+results+list">
+             <div class="common-property-ad-image lazy-ad-image-container error-image">
+              <img alt="Πώληση κατοικίας Ηράκλειο Διαμέρισμα 28 τ.μ." loading="lazy" src="https://rodeo.cdn.xe.gr/rodeo-static/packs/media/images/icons/placeholder_real_estate-2a001bb3feca4d9f9097c0e4f7c29f6a.svg"/>
+             </div>
+            </a>
+            <div class="property-ad-realtor-image">
+             <img alt="Δείτε όλες τις αγγελίες του επαγγελματία" height="40" loading="lazy" src="https://a2.xe.gr/LOGO/1636111997982.jpg" width="40"/>
+            </div>
+           </div>
+           <div class="common-property-ad-body grid-y align-justify">
+            <a href="https://www.xe.gr/property/d/poliseis-katoikion/774674562/hrakleio-220-28?first_in_widget_ad_id=735094560&amp;rank_in_widget=11&amp;widget_name=search+results+list">
+             <div class="common-property-ad-title">
+              <h3>
+               Διαμέρισμα 28 τ.μ.
+              </h3>
+             </div>
+             <div class="common-property-ad-price">
+              <span class="property-ad-price">
+               220 €
+              </span>
+              <span class="title-inline-seperator">
+               |
+              </span>
+              <span class="property-ad-price-per-sqm">
+               8 €/τ.μ.
+              </span>
+             </div>
+             <div class="common-property-ad-details grid-x">
+              <div class="property-ad-level-container">
+               <span class="property-ad-level">
+                Ημιυπόγειο
+               </span>
+              </div>
+              <div class="grid-x property-ad-bathrooms-container">
+               <i class="xe xe-bathroom">
+               </i>
+               <span>
+                ×1
+               </span>
+              </div>
+             </div>
+             <div class="common-property-ad-area-container">
+              <span class="common-property-ad-address">
+               Ηράκλειο | Πώληση κατοικίας
+              </span>
+             </div>
+            </a>
+           </div>
+          </div>
+         </div>
+         <div class="cell huge-3 xxxlarge-4 large-6 medium-4 small-6 tiny-12">
+          <div class="common-property-ad">
+           <div class="property-ad-image-container normal-border">
+            <a href="https://www.xe.gr/property/d/poliseis-katoikion/731161597/episkoph-30000-47?first_in_widget_ad_id=735094560&amp;rank_in_widget=12&amp;widget_name=search+results+list">
+             <div class="common-property-ad-image lazy-ad-image-container error-image">
+              <img alt="Πώληση κατοικίας Επισκοπή Μεζονέτα 47 τ.μ." loading="lazy" src="https://rodeo.cdn.xe.gr/rodeo-static/packs/media/images/icons/placeholder_real_estate-2a001bb3feca4d9f9097c0e4f7c29f6a.svg"/>
+             </div>
+            </a>
+            <div class="property-ad-realtor-image">
+             <img alt="Δείτε όλες τις αγγελίες του επαγγελματία" height="40" loading="lazy" src="https://a2.xe.gr/LOGO/1636121580378.jpg" width="40"/>
+            </div>
+           </div>
+           <div class="common-property-ad-body grid-y align-justify">
+            <a href="https://www.xe.gr/property/d/poliseis-katoikion/731161597/episkoph-30000-47?first_in_widget_ad_id=735094560&amp;rank_in_widget=12&amp;widget_name=search+results+list">
+             <div class="common-property-ad-title">
+              <h3>
+               Μεζονέτα 47 τ.μ.
+              </h3>
+             </div>
+             <div class="common-property-ad-price">
+              <span class="property-ad-price">
+               30.000 €
+              </span>
+              <span class="title-inline-seperator">
+               |
+              </span>
+              <span class="property-ad-price-per-sqm">
+               638 €/τ.μ.
+              </span>
+             </div>
+             <div class="common-property-ad-details grid-x">
+              <div class="property-ad-level-container">
+               <span class="property-ad-level">
+                Ισόγειο
+               </span>
+              </div>
+              <div class="grid-x property-ad-construction-year-container">
+               <i class="xe xe-house-construction">
+               </i>
+               <span>
+                ×1999
+               </span>
+              </div>
+             </div>
+             <div class="common-property-ad-area-container">
+              <span class="common-property-ad-address">
+               Επισκοπή | Πώληση κατοικίας
+              </span>
+             </div>
+            </a>
+           </div>
+          </div>
+         </div>
+         <div class="cell huge-3 xxxlarge-4 large-6 medium-4 small-6 tiny-12">
+          <div class="common-property-ad">
+           <div class="property-ad-image-container normal-border">
+            <a href="https://www.xe.gr/property/d/poliseis-katoikion/766675084/mochos-40000-160?first_in_widget_ad_id=735094560&amp;rank_in_widget=13&amp;widget_name=search+results+list">
+             <div class="common-property-ad-image lazy-ad-image-container error-image">
+              <img alt="Πώληση κατοικίας Μοχός Μονοκατοικία 160 τ.μ." loading="lazy" src="https://rodeo.cdn.xe.gr/rodeo-static/packs/media/images/icons/placeholder_real_estate-2a001bb3feca4d9f9097c0e4f7c29f6a.svg"/>
+             </div>
+            </a>
+            <div class="property-ad-realtor-image">
+             <img alt="Δείτε όλες τις αγγελίες του επαγγελματία" height="40" loading="lazy" src="https://a2.xe.gr/LOGO/1636121580378.jpg" width="40"/>
+            </div>
+           </div>
+           <div class="common-property-ad-body grid-y align-justify">
+            <a href="https://www.xe.gr/property/d/poliseis-katoikion/766675084/mochos-40000-160?first_in_widget_ad_id=735094560&amp;rank_in_widget=13&amp;widget_name=search+results+list">
+             <div class="common-property-ad-title">
+              <h3>
+               Μονοκατοικία 160 τ.μ.
+              </h3>
+             </div>
+             <div class="common-property-ad-price">
+              <span class="property-ad-price">
+               40.000 €
+              </span>
+              <span class="title-inline-seperator">
+               |
+              </span>
+              <span class="property-ad-price-per-sqm">
+               250 €/τ.μ.
+              </span>
+             </div>
+             <div class="common-property-ad-details grid-x">
+              <div class="property-ad-level-container">
+               <span class="property-ad-level">
+                Ισόγειο
+               </span>
+              </div>
+              <div class="grid-x property-ad-construction-year-container">
+               <i class="xe xe-house-construction">
+               </i>
+               <span>
+                ×1920
+               </span>
+              </div>
+             </div>
+             <div class="common-property-ad-area-container">
+              <span class="common-property-ad-address">
+               Μοχός | Πώληση κατοικίας
+              </span>
+             </div>
+            </a>
+           </div>
+          </div>
+         </div>
+         <div class="cell huge-3 xxxlarge-4 large-6 medium-4 small-6 tiny-12">
+          <div class="common-property-ad">
+           <div class="property-ad-image-container normal-border">
+            <a href="https://www.xe.gr/property/d/poliseis-katoikion/769973384/hrakleio-270000-150?first_in_widget_ad_id=735094560&amp;rank_in_widget=14&amp;widget_name=search+results+list">
+             <div class="common-property-ad-image lazy-ad-image-container error-image">
+              <img alt="Πώληση κατοικίας Ηράκλειο Κτίριο 150 τ.μ." loading="lazy" src="https://rodeo.cdn.xe.gr/rodeo-static/packs/media/images/icons/placeholder_real_estate-2a001bb3feca4d9f9097c0e4f7c29f6a.svg"/>
+             </div>
+            </a>
+            <div class="property-ad-realtor-image">
+             <img alt="Δείτε όλες τις αγγελίες του επαγγελματία" height="40" loading="lazy" src="https://a2.xe.gr/LOGO/1636121580378.jpg" width="40"/>
+            </div>
+           </div>
+           <div class="common-property-ad-body grid-y align-justify">
+            <a href="https://www.xe.gr/property/d/poliseis-katoikion/769973384/hrakleio-270000-150?first_in_widget_ad_id=735094560&amp;rank_in_widget=14&amp;widget_name=search+results+list">
+             <div class="common-property-ad-title">
+              <h3>
+               Κτίριο 150 τ.μ.
+              </h3>
+             </div>
+             <div class="common-property-ad-price">
+              <span class="property-ad-price">
+               270.000 €
+              </span>
+              <span class="title-inline-seperator">
+               |
+              </span>
+              <span class="property-ad-price-per-sqm">
+               1.800 €/τ.μ.
+              </span>
+             </div>
+             <div class="common-property-ad-details grid-x">
+              <div class="property-ad-level-container">
+               <span class="property-ad-level">
+                Ισόγειο
+               </span>
+              </div>
+              <div class="grid-x property-ad-construction-year-container">
+               <i class="xe xe-house-construction">
+               </i>
+               <span>
+                ×1960
+               </span>
+              </div>
+             </div>
+             <div class="common-property-ad-area-container">
+              <span class="common-property-ad-address">
+               Ηράκλειο | Πώληση κατοικίας
+              </span>
+             </div>
+            </a>
+           </div>
+          </div>
+         </div>
+         <aside class="save-search-widget cell huge-3 xxxlarge-4 large-6 medium-4 small-6 tiny-12 scroll tile-widget">
+          <div class="widget-wrapper">
+           <div>
+            <img alt="Θες να ενημερώνεσαι πρώτος για νέα ακίνητα;" height="89" src="https://rodeo.cdn.xe.gr/rodeo-static/packs/media/images/icons/search_residence-eac237a0ab087909b37c9c4965ed94ff.svg" width="136"/>
+           </div>
+           <h1>
+            Θες να ενημερώνεσαι πρώτος για νέα ακίνητα;
+           </h1>
+           <span>
+            Αποθήκευσε την αναζήτηση σου για να λαμβάνεις άμεσα ειδοποιήσεις για όλες τις νέες πωλήσεις κατοικιών που σε ενδιαφέρουν
+           </span>
+           <span class="link">
+            Αποθήκευση αναζήτησης
+           </span>
+          </div>
+         </aside>
+         <aside class="market-state-widget cell huge-3 xxxlarge-4 large-6 medium-4 small-6 tiny-12 scroll tile-widget">
+          <a class="widget-wrapper" href="https://www.xe.gr/property/times-akiniton">
+           <div>
+            <img alt="Θες να μάθεις τις τιμές και τις τάσεις της αγοράς ακινήτων;" height="89" src="https://rodeo.cdn.xe.gr/rodeo-static/packs/media/images/icons/market_state-501f06f63227a615e91855e971a93313.svg" width="182"/>
+           </div>
+           <h1>
+            Θες να μάθεις τις τιμές και τις τάσεις της αγοράς ακινήτων;
+           </h1>
+           <span class="text">
+            Δες τους πίνακες με τη μέση τιμή ανά τ.μ. καθώς και τον αριθμό των διαθέσιμων ακινήτων ανά περιοχή τόσο για το τρέχον έτος όσο και σε σύγκριση με προηγούμενα.
+           </span>
+           <span class="link">
+            Δες τις τιμές της αγοράς ακινήτων εδώ
+           </span>
+          </a>
+         </aside>
+        </div>
+       </div>
+      </div>
+      <div class="pagination-component">
+       <nav class="grid-x grid-padding-x align-center">
+        <ul class="results-pagination">
+         <li>
+          <a href="/property/results?geo_place_ids%5B%5D=ChIJoZh9gi_-mhQRMMa54iy9AAE&amp;item_type=re_residence&amp;page=1&amp;transaction_name=buy">
+           1
+          </a>
+         </li>
+         <li class="break-me">
+          ...
+         </li>
+         <li class="active">
+          <a href="/property/results?geo_place_ids%5B%5D=ChIJoZh9gi_-mhQRMMa54iy9AAE&amp;item_type=re_residence&amp;page=52&amp;transaction_name=buy">
+           52
+          </a>
+         </li>
+        </ul>
+       </nav>
+      </div>
+      <div class="grid-x grid-margin-x">
+       <div class="cell xlarge-6 large-12 small-6 tiny-12">
+        <div class="cell tiny-12 small-3 searches-widget" xmlns="http://www.w3.org/1999/html">
+         <h2 class="title">
+          Σχετικές αναζητήσεις
+         </h2>
+         <ul class="list">
+          <li>
+           <a class="link" href="https://www.xe.gr/property/r/poliseis-diamerismaton/ChIJoZh9gi_-mhQRMMa54iy9AAE_krhth">
+            Πωλήσεις διαμερισμάτων Κρήτη
+           </a>
+          </li>
+          <li>
+           <a class="link" href="https://www.xe.gr/property/r/poliseis-monokatoikion/ChIJoZh9gi_-mhQRMMa54iy9AAE_krhth">
+            Πωλήσεις μονοκατοικιών Κρήτη
+           </a>
+          </li>
+          <li>
+           <a class="link" href="https://www.xe.gr/property/r/poliseis-mezoneton/ChIJoZh9gi_-mhQRMMa54iy9AAE_krhth">
+            Πωλήσεις μεζονετών Κρήτη
+           </a>
+          </li>
+          <li>
+           <a class="link" href="https://www.xe.gr/property/r/poliseis-gis-oikopedon/ChIJoZh9gi_-mhQRMMa54iy9AAE_krhth">
+            Πωλήσεις γης Κρήτη
+           </a>
+          </li>
+          <li>
+           <a class="link" href="https://www.xe.gr/property/r/poliseis-allon-akiniton/ChIJoZh9gi_-mhQRMMa54iy9AAE_krhth">
+            Πωλήσεις διαφόρων ακινήτων Κρήτη
+           </a>
+          </li>
+          <li>
+           <a class="link" href="https://www.xe.gr/property/r/poliseis-parking/ChIJoZh9gi_-mhQRMMa54iy9AAE_krhth">
+            Πωλήσεις parking Κρήτη
+           </a>
+          </li>
+          <li>
+           <a class="link" href="https://www.xe.gr/property/r/poliseis-epaggelmatikon-xoron/ChIJoZh9gi_-mhQRMMa54iy9AAE_krhth">
+            Πωλήσεις επαγγελματικών χώρων Κρήτη
+           </a>
+          </li>
+         </ul>
+         <div class="show-more">
+          <button type="button">
+           <span>
+            Δες περισσότερα
+           </span>
+           <span class="xe xe-angle-arrow-down">
+           </span>
+          </button>
+         </div>
+        </div>
+       </div>
+       <div class="cell xlarge-6 large-12 small-6 tiny-12">
+        <div class="cell tiny-12 small-3 searches-widget" xmlns="http://www.w3.org/1999/html">
+         <h2 class="title">
+          Δημοφιλείς αναζητήσεις
+         </h2>
+         <ul class="list">
+          <li>
+           <a class="link" href="https://www.xe.gr/property/r/enoikiaseis-katoikion/ChIJ8UNwBh-9oRQR3Y1mdkU1Nic_athhna">
+            Ενοικιάσεις κατοικιών Αθήνα
+           </a>
+          </li>
+          <li>
+           <a class="link" href="https://www.xe.gr/property/r/enoikiaseis-katoikion/ChIJTazECEejoRQRYRYsuxSJ348_peristeri">
+            Ενοικιάσεις κατοικιών Περιστέρι
+           </a>
+          </li>
+          <li>
+           <a class="link" href="https://www.xe.gr/property/r/enoikiaseis-katoikion/ChIJvUGcxaS8oRQRhQVsOC1EXzw_aigalew">
+            Ενοικιάσεις κατοικιών Αιγάλεω
+           </a>
+          </li>
+          <li>
+           <a class="link" href="https://www.xe.gr/property/r/enoikiaseis-katoikion/ChIJZfP8CqijoRQRoHm54iy9AAQ_ilion">
+            Ενοικιάσεις κατοικιών Ίλιον
+           </a>
+          </li>
+          <li>
+           <a class="link" href="https://www.xe.gr/property/r/enoikiaseis-katoikion/ChIJRzGst-u7oRQR9_0w_5XaINg_peiraias">
+            Ενοικιάσεις κατοικιών Πειραιάς
+           </a>
+          </li>
+          <li>
+           <a class="link" href="https://www.xe.gr/property/r/enoikiaseis-katoikion/ChIJ46nkZnejoRQRhcY8oQ1xtI4_petroypolh">
+            Ενοικιάσεις κατοικιών Πετρούπολη
+           </a>
+          </li>
+          <li>
+           <a class="link" href="https://www.xe.gr/property/r/enoikiaseis-katoikion/ChIJIZwoz9W6oRQREHu54iy9AAQ_chaidari">
+            Ενοικιάσεις κατοικιών Χαϊδάρι
+           </a>
+          </li>
+          <li>
+           <a class="link" href="https://www.xe.gr/property/r/enoikiaseis-katoikion/ChIJ6QytjI69oRQRmVCWR9qyKrA_hlioypolh">
+            Ενοικιάσεις κατοικιών Ηλιούπολη
+           </a>
+          </li>
+          <li>
+           <a class="link" href="https://www.xe.gr/property/r/enoikiaseis-katoikion/ChIJ7eAoFPQ4qBQRqXTVuBXnugk_thessalonikh">
+            Ενοικιάσεις κατοικιών Θεσσαλονίκη
+           </a>
+          </li>
+          <li>
+           <a class="link" href="https://www.xe.gr/property/r/enoikiaseis-katoikion/ChIJSxfWwksWoRQRBMk0e18KCzg_chalkida">
+            Ενοικιάσεις κατοικιών Χαλκίδα
+           </a>
+          </li>
+          <li>
+           <a class="link" href="https://www.xe.gr/property/r/enoikiaseis-katoikion/ChIJLe0kpZk1XhMRoIy54iy9AAQ_patra">
+            Ενοικιάσεις κατοικιών Πάτρα
+           </a>
+          </li>
+          <li>
+           <a class="link" href="https://www.xe.gr/property/r/enoikiaseis-katoikion/ChIJKXhLYpmwYRMRnl9ice2VH_w_kalamata">
+            Ενοικιάσεις κατοικιών Καλαμάτα
+           </a>
+          </li>
+          <li>
+           <a class="link" href="https://www.xe.gr/property/r/enoikiaseis-katoikion/ChIJoUddWVyIWBMRMJy54iy9AAQ_larisa">
+            Ενοικιάσεις κατοικιών Λάρισα
+           </a>
+          </li>
+          <li>
+           <a class="link" href="https://www.xe.gr/property/r/enoikiaseis-katoikion/ChIJXy53IjMZWRMRwJ-54iy9AAQ_trikala">
+            Ενοικιάσεις κατοικιών Τρίκαλα
+           </a>
+          </li>
+          <li>
+           <a class="link" href="https://www.xe.gr/property/r/poliseis-katoikion/ChIJ8UNwBh-9oRQR3Y1mdkU1Nic_athhna">
+            Πωλήσεις κατοικιών Αθήνα
+           </a>
+          </li>
+          <li>
+           <a class="link" href="https://www.xe.gr/property/r/poliseis-katoikion/ChIJTazECEejoRQRYRYsuxSJ348_peristeri">
+            Πωλήσεις κατοικιών Περιστέρι
+           </a>
+          </li>
+          <li>
+           <a class="link" href="https://www.xe.gr/property/r/poliseis-katoikion/ChIJIY13tzSxoRQRB-Qnu6NZIf0_salamina">
+            Πωλήσεις κατοικιών Σαλαμίνα
+           </a>
+          </li>
+          <li>
+           <a class="link" href="https://www.xe.gr/property/r/poliseis-katoikion/ChIJSxfWwksWoRQRBMk0e18KCzg_chalkida">
+            Πωλήσεις κατοικιών Χαλκίδα
+           </a>
+          </li>
+          <li>
+           <a class="link" href="https://www.xe.gr/property/r/poliseis-katoikion/ChIJLe0kpZk1XhMRoIy54iy9AAQ_patra">
+            Πωλήσεις κατοικιών Πάτρα
+           </a>
+          </li>
+          <li>
+           <a class="link" href="https://www.xe.gr/property/r/poliseis-katoikion/ChIJKXhLYpmwYRMRnl9ice2VH_w_kalamata">
+            Πωλήσεις κατοικιών Καλαμάτα
+           </a>
+          </li>
+          <li>
+           <a class="link" href="https://www.xe.gr/property/r/poliseis-katoikion/ChIJoUddWVyIWBMRMJy54iy9AAQ_larisa">
+            Πωλήσεις κατοικιών Λάρισα
+           </a>
+          </li>
+          <li>
+           <a class="link" href="https://www.xe.gr/property/r/enoikiaseis-epaggelmatikon-xoron/ChIJTazECEejoRQRYRYsuxSJ348_peristeri">
+            Ενοικιάσεις επαγγελματικών χώρων Περιστέρι
+           </a>
+          </li>
+          <li>
+           <a class="link" href="https://www.xe.gr/property/r/enoikiaseis-katastimaton/ChIJLbYjnoSioRQRGDYRmwa6d6M_galatsi">
+            Ενοικιάσεις καταστημάτων Γαλάτσι
+           </a>
+          </li>
+          <li>
+           <a class="link" href="https://www.xe.gr/property/r/poliseis-oikopedon/ChIJIY13tzSxoRQRB-Qnu6NZIf0_salamina">
+            Πωλήσεις οικοπέδων  Σαλαμίνα
+           </a>
+          </li>
+          <li>
+           <a class="link" href="https://www.xe.gr/property/r/enoikiaseis-parking/ChIJy1stSUK9oRQRi9ObJcOmO20_pagkrati">
+            Ενοικιάσεις parking Παγκράτι
+           </a>
+          </li>
+         </ul>
+         <div class="show-more">
+          <button type="button">
+           <span>
+            Δες περισσότερα
+           </span>
+           <span class="xe xe-angle-arrow-down">
+           </span>
+          </button>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="grid-x company-widget">
+       <div class="xxlarge-4 large-12 medium-4 tiny-12 widget-image-container">
+        <img alt="Χρυσή Ευκαιρία: το #1 στην αναζήτηση ακινήτων στην Ελλάδα" height="145" src="https://rodeo.cdn.xe.gr/rodeo-static/packs/media/images/property/identity-widget-de0a333735a968cf3d1a834534b61aa5.svg" width="171"/>
+       </div>
+       <div class="xxlarge-8 large-12 medium-8 tiny-12 widget-content-container">
+        <h2>
+         Χρυσή Ευκαιρία: το #1 στην αναζήτηση ακινήτων στην Ελλάδα
+        </h2>
+        <p>
+         Περισσότεροι από 1,5εκ. άνθρωποι κάθε μήνα, αναζητούν το επόμενο τους σπίτι, κατάστημα, γραφείο, οικόπεδο στην Χρυσή Ευκαιρία, το #1 στην αναζήτηση ακινήτου. Με όλα τα ακίνητα της αγοράς, προβολή σε χάρτη, χωρίς διπλές και τριπλές αγγελίες για το ίδιο ακίνητο, έξυπνη ταξινόμηση και πολλές ακόμα μοναδικές δυνατότητες.
+        </p>
+       </div>
+      </div>
+     </div>
+     <div class="cell large-6 tiny-12 data-sticky-container">
+     </div>
+    </div>
+   </div>
+  </main>
+  <div class="google-disclaimer">
+   <div class="google-disclaimer-wrapper">
+    <div class="google-disclaimer-content grid-x align-middle align-center">
+     <p class="cell tiny-9 small-9">
+      Με τη χρήση αυτού του ιστότοπου, αποδέχεστε τη χρήση των cookies.
+      <a class="see-details" href="https://www.google.com/policies/technologies/cookies/" rel="noreferrer" target="_blank">
+       Μάθετε περισσότερα
+      </a>
+     </p>
+     <div class="cell tiny-2 small-1">
+      <button>
+       <a class="btn-disclaimer-ok button-corporate" href="https://www.xe.gr/">
+        Έγινε
+       </a>
+      </button>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="results-content grid-x">
+   <div class="cell large-6 tiny-12 results-grid-container">
+    <footer class="footer-container container-redesigned results-redesigned">
+     <div class="grid-container">
+      <div class="gray-line-top">
+      </div>
+      <div class="grid-x">
+       <div class="tiny-12 small-8 cell quicklinks">
+        <div class="grid-x">
+         <div class="tiny-12 cell">
+          <ul class="footer-list top-list top-list-redesigned">
+           <li>
+            <a class="link" href="https://www.xe.gr/">
+             <u>
+              Αρχική
+             </u>
+            </a>
+           </li>
+           <li>
+            <a class="link" href="https://support.xe.gr/" rel="noopener" target="_blank">
+             <u>
+              FAQ
+             </u>
+            </a>
+           </li>
+           <li>
+            <a class="link" href="https://support.xe.gr/el/articles/364832-όροι-χρήσης" rel="noopener" target="_blank">
+             <u>
+              Όροι χρήσης
+             </u>
+            </a>
+           </li>
+           <li>
+            <a class="link" href="https://support.xe.gr/el/articles/1941936-πολιτική-δεδομένων" rel="noopener" target="_blank">
+             <u>
+              Πολιτική δεδομένων
+             </u>
+            </a>
+           </li>
+           <li>
+            <a class="link" href="https://careers.xe.gr/" rel="noopener" target="_blank">
+             <u>
+              Ευκαιρίες καριέρας
+             </u>
+            </a>
+           </li>
+           <li>
+            <a class="link" href="https://support.xe.gr/el/articles/587201-επικοινωνία-με-τη-χρυσή-ευκαιρία?from=contact_xe.gr" rel="noopener" target="_blank">
+             <u>
+              Επικοινωνία
+             </u>
+            </a>
+           </li>
+          </ul>
+         </div>
+        </div>
+        <div class="grid-x">
+         <div class="tiny-12 small-3 cell">
+          <div class="footer-middle-section quick-links-section">
+           <div class="quick-links-title">
+            <a class="link" href="https://www.xe.gr/property">
+             <strong>
+              <u>
+               Ακίνητα
+              </u>
+             </strong>
+            </a>
+           </div>
+           <div class="show-more-categories" data-categories='[{"id":"enoikiaseis-katoikion","text":"Ενοικιάσεις κατοικιών","url":"https://www.xe.gr/property/s/enoikiaseis-katoikion"},{"id":"enoikiaseis-epaggelmatikon-xoron","text":"Ενοικιάσεις επαγγ. χώρων","url":"https://www.xe.gr/property/s/enoikiaseis-epaggelmatikon-xoron"},{"id":"times-kai-taseis","text":"Τιμές και τάσεις της αγοράς ακινήτων","url":"https://www.xe.gr/property/times-akiniton"},{"id":"enoikiaseis-parking","text":"Ενοικιάσεις parking","url":"https://www.xe.gr/property/s/enoikiaseis-parking"},{"id":"poliseis-katoikion","text":"Πωλήσεις κατοικιών","url":"https://www.xe.gr/property/s/poliseis-katoikion"},{"id":"poliseis-epaggelmatikon-xoron","text":"Πωλήσεις επαγγ. χώρων","url":"https://www.xe.gr/property/s/poliseis-epaggelmatikon-xoron"},{"id":"poliseis-gis-oikopedon","text":"Πωλήσεις γης","url":"https://www.xe.gr/property/s/poliseis-gis-oikopedon"},{"id":"poliseis-parking","text":"Πωλήσεις parking","url":"https://www.xe.gr/property/s/poliseis-parking"},{"id":"foititika-spitia","text":"Φοιτητικά σπίτια","url":"https://www.xe.gr/property/foititika-spitia"}]' data-translations='{"see_more":"Δες περισσότερα","see_less":"Δες λιγότερα"}'>
+            <div class="characteristics-categories">
+             <ul class="footer-list quick-links-list overflowed-categories-container">
+              <li>
+               <a class="link" href="https://www.xe.gr/property/s/enoikiaseis-katoikion">
+                Ενοικιάσεις κατοικιών
+               </a>
+              </li>
+              <li>
+               <a class="link" href="https://www.xe.gr/property/s/enoikiaseis-epaggelmatikon-xoron">
+                Ενοικιάσεις επαγγ. χώρων
+               </a>
+              </li>
+              <li>
+               <a class="link" href="https://www.xe.gr/property/times-akiniton">
+                Τιμές και τάσεις της αγοράς ακινήτων
+               </a>
+              </li>
+              <li>
+               <a class="link" href="https://www.xe.gr/property/s/enoikiaseis-parking">
+                Ενοικιάσεις parking
+               </a>
+              </li>
+              <li>
+               <a class="link" href="https://www.xe.gr/property/s/poliseis-katoikion">
+                Πωλήσεις κατοικιών
+               </a>
+              </li>
+              <li>
+               <a class="link" href="https://www.xe.gr/property/s/poliseis-epaggelmatikon-xoron">
+                Πωλήσεις επαγγ. χώρων
+               </a>
+              </li>
+              <li>
+               <a class="link" href="https://www.xe.gr/property/s/poliseis-gis-oikopedon">
+                Πωλήσεις γης
+               </a>
+              </li>
+              <li>
+               <a class="link" href="https://www.xe.gr/property/s/poliseis-parking">
+                Πωλήσεις parking
+               </a>
+              </li>
+              <li>
+               <a class="link" href="https://www.xe.gr/property/foititika-spitia">
+                Φοιτητικά σπίτια
+               </a>
+              </li>
+             </ul>
+             <div class="show-more">
+              <button type="button">
+               <span>
+                Δες περισσότερα
+               </span>
+               <span class="xe xe-angle-arrow-down">
+               </span>
+              </button>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="tiny-12 small-3 cell">
+          <div class="footer-middle-section quick-links-section">
+           <div class="quick-links-title">
+            <a class="link" href="https://www.xe.gr/%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1/%CE%B5%CF%8D%CF%81%CE%B5%CF%83%CE%B7-%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1%CF%82">
+             <strong>
+              <u>
+               Εργασία
+              </u>
+             </strong>
+            </a>
+           </div>
+           <div class="show-more-categories" data-categories='[{"id":"ergasia","text":"Θέσεις εργασίας","url":"https://www.xe.gr/%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1/%CE%B8%CE%AD%CF%83%CE%B5%CE%B9%CF%82-%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1%CF%82"},{"id":"evresi-prosopikou","text":"Εύρεση προσωπικού","url":"https://www.xe.gr/jobs/evresi-prosopikou"},{"id":"athlitismos","text":"Αθλητισμός","url":"https://www.xe.gr/%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1/%CE%B8%CE%AD%CF%83%CE%B5%CE%B9%CF%82-%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1%CF%82?category=athlhtismos_ekswterikes_drasthriothtes"},{"id":"emporio","text":"Εμπόριο","url":"https://www.xe.gr/%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1/%CE%B8%CE%AD%CF%83%CE%B5%CE%B9%CF%82-%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1%CF%82?category=emporio_prowthhsh"},{"id":"epixeirimatikotita","text":"Επιχειρηματικότητα","url":"https://www.xe.gr/%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1/%CE%B8%CE%AD%CF%83%CE%B5%CE%B9%CF%82-%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1%CF%82?category=epixeirhmatikothta"},{"id":"mathimata","text":"Μαθήματα","url":"https://www.xe.gr/%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1/%CE%B8%CE%AD%CF%83%CE%B5%CE%B9%CF%82-%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1%CF%82?category=ekpaideush_mathhmata"},{"id":"stelexi","text":"Στελέχη","url":"https://www.xe.gr/%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1/%CE%B8%CE%AD%CF%83%CE%B5%CE%B9%CF%82-%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1%CF%82?category=dioikhsh_stelexh_epixeirhsewn_episthmh"},{"id":"texnites","text":"Τεχνίτες","url":"https://www.xe.gr/%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1/%CE%B8%CE%AD%CF%83%CE%B5%CE%B9%CF%82-%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1%CF%82?category=texnites_ergates"},{"id":"ypostirixi-grafeiou","text":"Υποστήριξη γραφείου","url":"https://www.xe.gr/%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1/%CE%B8%CE%AD%CF%83%CE%B5%CE%B9%CF%82-%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1%CF%82?category=yposthriksh_grafeiou_eksyphrethsh_pelatwn_logisthrio"}]' data-translations='{"see_more":"Δες περισσότερα","see_less":"Δες λιγότερα"}'>
+            <div class="characteristics-categories">
+             <ul class="footer-list quick-links-list overflowed-categories-container">
+              <li>
+               <a class="link" href="https://www.xe.gr/%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1/%CE%B8%CE%AD%CF%83%CE%B5%CE%B9%CF%82-%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1%CF%82">
+                Θέσεις εργασίας
+               </a>
+              </li>
+              <li>
+               <a class="link" href="https://www.xe.gr/jobs/evresi-prosopikou">
+                Εύρεση προσωπικού
+               </a>
+              </li>
+              <li>
+               <a class="link" href="https://www.xe.gr/%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1/%CE%B8%CE%AD%CF%83%CE%B5%CE%B9%CF%82-%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1%CF%82?category=athlhtismos_ekswterikes_drasthriothtes">
+                Αθλητισμός
+               </a>
+              </li>
+              <li>
+               <a class="link" href="https://www.xe.gr/%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1/%CE%B8%CE%AD%CF%83%CE%B5%CE%B9%CF%82-%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1%CF%82?category=emporio_prowthhsh">
+                Εμπόριο
+               </a>
+              </li>
+              <li>
+               <a class="link" href="https://www.xe.gr/%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1/%CE%B8%CE%AD%CF%83%CE%B5%CE%B9%CF%82-%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1%CF%82?category=epixeirhmatikothta">
+                Επιχειρηματικότητα
+               </a>
+              </li>
+              <li>
+               <a class="link" href="https://www.xe.gr/%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1/%CE%B8%CE%AD%CF%83%CE%B5%CE%B9%CF%82-%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1%CF%82?category=ekpaideush_mathhmata">
+                Μαθήματα
+               </a>
+              </li>
+              <li>
+               <a class="link" href="https://www.xe.gr/%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1/%CE%B8%CE%AD%CF%83%CE%B5%CE%B9%CF%82-%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1%CF%82?category=dioikhsh_stelexh_epixeirhsewn_episthmh">
+                Στελέχη
+               </a>
+              </li>
+              <li>
+               <a class="link" href="https://www.xe.gr/%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1/%CE%B8%CE%AD%CF%83%CE%B5%CE%B9%CF%82-%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1%CF%82?category=texnites_ergates">
+                Τεχνίτες
+               </a>
+              </li>
+              <li>
+               <a class="link" href="https://www.xe.gr/%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1/%CE%B8%CE%AD%CF%83%CE%B5%CE%B9%CF%82-%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1%CF%82?category=yposthriksh_grafeiou_eksyphrethsh_pelatwn_logisthrio">
+                Υποστήριξη γραφείου
+               </a>
+              </li>
+             </ul>
+             <div class="show-more">
+              <button type="button">
+               <span>
+                Δες περισσότερα
+               </span>
+               <span class="xe xe-angle-arrow-down">
+               </span>
+              </button>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="tiny-12 small-3 cell">
+          <div class="footer-middle-section quick-links-section">
+           <div class="quick-links-title">
+            <a class="link" href="https://www.xe.gr/automoto/">
+             <strong>
+              <u>
+               Αυτοκίνητα
+              </u>
+             </strong>
+            </a>
+           </div>
+           <div class="show-more-categories" data-categories='[{"id":"cars","text":"Αυτοκίνητα","url":"https://www.xe.gr/automoto/"},{"id":"motorbikes","text":"Μοτοσυκλέτες","url":"https://www.xe.gr/automoto/used-bikes.html"},{"id":"professional-vehicles","text":"Επαγγελματικά οχήματα","url":"https://www.xe.gr/automoto/used-professional_vehicles.html"},{"id":"taxis","text":"Ταξί","url":"https://www.xe.gr/automoto/used-taxis.html"},{"id":"trailers","text":"Τροχόσπιτα","url":"https://www.xe.gr/automoto/search?System.item_type=auto_caravan"},{"id":"boats","text":"Σκάφη","url":"https://www.xe.gr/boats/"},{"id":"aircraft","text":"Αεροσκάφη","url":"https://www.xe.gr/automoto/search?System.item_type=auto_plane"},{"id":"various-vehicles","text":"Διάφορα οχήματα","url":"https://www.xe.gr/automoto/search?System.item_type=auto_misc"},{"id":"spare-parts","text":"Ανταλλακτικά - αξεσουάρ","url":"https://www.xe.gr/automoto/used-vehicle_parts.html"}]' data-translations='{"see_more":"Δες περισσότερα","see_less":"Δες λιγότερα"}'>
+            <div class="characteristics-categories">
+             <ul class="footer-list quick-links-list overflowed-categories-container">
+              <li>
+               <a class="link" href="https://www.xe.gr/automoto/">
+                Αυτοκίνητα
+               </a>
+              </li>
+              <li>
+               <a class="link" href="https://www.xe.gr/automoto/used-bikes.html">
+                Μοτοσυκλέτες
+               </a>
+              </li>
+              <li>
+               <a class="link" href="https://www.xe.gr/automoto/used-professional_vehicles.html">
+                Επαγγελματικά οχήματα
+               </a>
+              </li>
+              <li>
+               <a class="link" href="https://www.xe.gr/automoto/used-taxis.html">
+                Ταξί
+               </a>
+              </li>
+              <li>
+               <a class="link" href="https://www.xe.gr/automoto/search?System.item_type=auto_caravan">
+                Τροχόσπιτα
+               </a>
+              </li>
+              <li>
+               <a class="link" href="https://www.xe.gr/boats/">
+                Σκάφη
+               </a>
+              </li>
+              <li>
+               <a class="link" href="https://www.xe.gr/automoto/search?System.item_type=auto_plane">
+                Αεροσκάφη
+               </a>
+              </li>
+              <li>
+               <a class="link" href="https://www.xe.gr/automoto/search?System.item_type=auto_misc">
+                Διάφορα οχήματα
+               </a>
+              </li>
+              <li>
+               <a class="link" href="https://www.xe.gr/automoto/used-vehicle_parts.html">
+                Ανταλλακτικά - αξεσουάρ
+               </a>
+              </li>
+             </ul>
+             <div class="show-more">
+              <button type="button">
+               <span>
+                Δες περισσότερα
+               </span>
+               <span class="xe xe-angle-arrow-down">
+               </span>
+              </button>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="tiny-12 small-3 cell">
+          <div class="footer-middle-section quick-links-section">
+           <div class="quick-links-title">
+            <a class="link" href="https://www.xe.gr/epixeirisiaka/">
+             <strong>
+              <u>
+               Επιχειρήσεις
+              </u>
+             </strong>
+            </a>
+           </div>
+           <div class="show-more-categories" data-categories='[{"id":"businesses-sales","text":"Πωλήσεις επιχειρήσεων","url":"https://www.xe.gr/epixeirisiaka/epixeiriseis,13632.html"},{"id":"businesses-equipment","text":"Εξοπλισμός επιχειρήσεων","url":"https://www.xe.gr/epixeirisiaka/eksoplismos-epixeiriseon,12422.html"},{"id":"office-equipment","text":"Εξοπλισμός γραφείου","url":"https://www.xe.gr/eksoplismos-grafeiou/"},{"id":"machinery","text":"Μηχανήματα","url":"https://www.xe.gr/epixeirisiaka/mixanimata,34232.html"},{"id":"professional-licenses","text":"Επαγγελματικές άδειες","url":"https://www.xe.gr/epixeirisiaka/epaggelmatikes-adeies,13422.html"},{"id":"enoikiaseis-epaggelmatikon-xoron","text":"Ενοικιάσεις επαγγ. χώρων","url":"https://www.xe.gr/property/s/enoikiaseis-epaggelmatikon-xoron"},{"id":"poliseis-epaggelmatikon-xoron","text":"Πωλήσεις επαγγ. χώρων","url":"https://www.xe.gr/property/s/poliseis-epaggelmatikon-xoron"}]' data-translations='{"see_more":"Δες περισσότερα","see_less":"Δες λιγότερα"}'>
+            <div class="characteristics-categories">
+             <ul class="footer-list quick-links-list overflowed-categories-container">
+              <li>
+               <a class="link" href="https://www.xe.gr/epixeirisiaka/epixeiriseis,13632.html">
+                Πωλήσεις επιχειρήσεων
+               </a>
+              </li>
+              <li>
+               <a class="link" href="https://www.xe.gr/epixeirisiaka/eksoplismos-epixeiriseon,12422.html">
+                Εξοπλισμός επιχειρήσεων
+               </a>
+              </li>
+              <li>
+               <a class="link" href="https://www.xe.gr/eksoplismos-grafeiou/">
+                Εξοπλισμός γραφείου
+               </a>
+              </li>
+              <li>
+               <a class="link" href="https://www.xe.gr/epixeirisiaka/mixanimata,34232.html">
+                Μηχανήματα
+               </a>
+              </li>
+              <li>
+               <a class="link" href="https://www.xe.gr/epixeirisiaka/epaggelmatikes-adeies,13422.html">
+                Επαγγελματικές άδειες
+               </a>
+              </li>
+              <li>
+               <a class="link" href="https://www.xe.gr/property/s/enoikiaseis-epaggelmatikon-xoron">
+                Ενοικιάσεις επαγγ. χώρων
+               </a>
+              </li>
+              <li>
+               <a class="link" href="https://www.xe.gr/property/s/poliseis-epaggelmatikon-xoron">
+                Πωλήσεις επαγγ. χώρων
+               </a>
+              </li>
+             </ul>
+             <div class="show-more">
+              <button type="button">
+               <span>
+                Δες περισσότερα
+               </span>
+               <span class="xe xe-angle-arrow-down">
+               </span>
+              </button>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="gray-line-middle">
+        </div>
+       </div>
+       <div class="tiny-12 small-4 cell custom-container">
+        <div class="footer-phone-section-container">
+         <div class="grid-x footer-phone-section phone-section-redesigned">
+          <div class="tiny-12 small-12 cell">
+           <div class="footer-phone-icon-number">
+            <a aria-label="Phone number" href="tel:+302109091300">
+             <i class="xe xe-phone-filled">
+             </i>
+            </a>
+            <a href="tel:+302109091300">
+             210 9091300
+            </a>
+           </div>
+          </div>
+          <div class="tiny-12 cell">
+           <div class="footer-phone-additional-info-container additional-info-redesigned">
+            <div class="footer-phone-promotion-text-redesigned">
+             Τηλεφώνησε τώρα από σταθερό ή κινητό και βάλε εύκολα και γρήγορα την αγγελία σου!
+            </div>
+            <div class="footer-phone-description-redesigned">
+             Αστική χρέωση. Η πληρωμή για την καταχώριση αγγελιών πραγματοποιείται τηλεφωνικά μέσω πιστωτικής ή χρεωστικής κάρτας ή μέσω τραπεζικής κατάθεσης.
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="tiny-12 cell">
+        <div class="gray-line-bottom">
+        </div>
+        <div class="grid-x">
+         <div class="footer-middle-section social-section middle-section-redesigned">
+          <div class="footer-middle-section-content social-redesigned">
+           <div class="footer-social-section-item follow-us">
+            <div class="social-section-title">
+             Ακολούθησέ μας:
+            </div>
+           </div>
+           <div class="footer-social-section-item">
+            <a class="link" href="https://www.facebook.com/xrisi.eukairia/">
+             <i class="xe xe-facebook">
+             </i>
+             <u>
+              Facebook
+             </u>
+            </a>
+           </div>
+           <div class="footer-social-section-item">
+            <a class="link" href="http://twitter.com/xe_gr">
+             <i class="xe xe-twitter">
+             </i>
+             <u>
+              Twitter
+             </u>
+            </a>
+           </div>
+           <div class="footer-social-section-item">
+            <a class="link" href="https://www.linkedin.com/company/xrysi-eukairia-ergasia">
+             <i class="xe xe-linkedin">
+             </i>
+             <u>
+              LinkedIn
+             </u>
+            </a>
+           </div>
+           <div class="footer-social-section-item">
+            <a class="link" href="https://instagram.com/xe_gr/">
+             <i class="xe xe-instagram">
+             </i>
+             <u>
+              Instagram
+             </u>
+            </a>
+           </div>
+          </div>
+          <div class="footer-copyright">
+           Copyright 2011-2022, Χρυσή Ευκαιρία Μ.Α.Ε.
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </footer>
+   </div>
+  </div>
+ </body>
+</html>
