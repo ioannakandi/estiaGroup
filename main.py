@@ -197,7 +197,7 @@ def getSelectedHouses(location,level):
    
 #those are just for testing
 #retrieveData("Mesologgi")
-#storeData("Mesologgi")
+#storeData("Crete")
 #getStatistics("Mesologgi",0)
 #print(getSelectedHouses("Mesologgi",1))
 
@@ -237,4 +237,4 @@ def getStatisticsAPI():
 
 
 if __name__ == "__main__":
-    app.run(debug=True, host='0.0.0.0', port=5000)
+   app.run(debug=True, host='0.0.0.0', port=5000)
