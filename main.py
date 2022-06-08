@@ -13,6 +13,9 @@ from pymongo import MongoClient
 from pymongo.errors import DuplicateKeyError
 import time, os, sys
 import pandas as pd
+from flask import Flask, render_template, flash, request, Markup, session, Response, send_file
+from flask_cors import CORS, cross_origin
+import json
 
 # Connect to our local MongoDB
 mongodb_hostname = os.environ.get("MONGO_HOSTNAME","localhost")
@@ -21,6 +24,15 @@ client = MongoClient('mongodb://'+mongodb_hostname+':27017/')
 # Choose shipping database
 db = client['estiaGroup']
 houses = db['houses']
+
+# App config.
+app = Flask(__name__, static_url_path='',
+            static_folder='templates\classimax-premium',
+            template_folder='templates\classimax-premium')
+DEBUG = True
+app.config.from_object(__name__)
+app.config['SECRET_KEY'] = '7d441f27d441f27567d441f2b6176a'
+CORS(app)
 
 
 def storeData(location):
@@ -55,12 +67,12 @@ def storeData(location):
                     try:
                         bedroom = soup_1.find('div', attrs = {'class':'common-property-ad-details grid-x'}).find('div', attrs = {'class':'grid-x property-ad-bedrooms-container'}).find('span').text
                     except:
-                        bedroom = '0'
+                        bedroom = '1'
                     
                     try:
                         bathroom = soup_1.find('div', attrs = {'class':'common-property-ad-details grid-x'}).find('div', attrs = {'class':'grid-x property-ad-bathrooms-container'}).find('span').text
                     except:
-                        bathroom = '0'
+                        bathroom = '1'
                     
                     try:
                         year = soup_1.find('div', attrs = {'class':'common-property-ad-details grid-x'}).find('div', attrs = {'class':'grid-x property-ad-construction-year-container'}).find('span').text
@@ -72,12 +84,12 @@ def storeData(location):
                     try:
                         bedroom = soup_1.find('div', attrs = {'class':'common-property-ad-details grid-x'}).find('div', attrs = {'class':'grid-x property-ad-bedrooms-container'}).find('span').text
                     except:
-                        bedroom = '0'
+                        bedroom = '1'
                     
                     try:
                         bathroom = soup_1.find('div', attrs = {'class':'common-property-ad-details grid-x'}).find('div', attrs = {'class':'grid-x property-ad-bathrooms-container'}).find('span').text
                     except:
-                        bathroom = '0'
+                        bathroom = '1'
                     
                     try:
                         year = soup_1.find('div', attrs = {'class':'common-property-ad-details grid-x'}).find('div', attrs = {'class':'grid-x property-ad-construction-year-container'}).find('span').text
@@ -89,12 +101,12 @@ def storeData(location):
                     try:
                         bedroom = soup_1.find('div', attrs = {'class':'common-property-ad-details grid-x'}).find('div', attrs = {'class':'grid-x property-ad-bedrooms-container'}).find('span').text
                     except:
-                        bedroom = '0'
+                        bedroom = '1'
                     
                     try:
                         bathroom = soup_1.find('div', attrs = {'class':'common-property-ad-details grid-x'}).find('div', attrs = {'class':'grid-x property-ad-bathrooms-container'}).find('span').text
                     except:
-                        bathroom = '0'
+                        bathroom = '1'
                     
                     try:
                         year = soup_1.find('div', attrs = {'class':'common-property-ad-details grid-x'}).find('div', attrs = {'class':'grid-x property-ad-construction-year-container'}).find('span').text
@@ -107,7 +119,7 @@ def storeData(location):
                 print(estate['price'])
                 estate['pricepersqm'] = int(pricepersqm.strip().replace("€/τ.μ.","").replace(".","").strip())
                 print(estate['pricepersqm'])
-                estate['level'] = int(level.strip().replace("ος","").replace("Ισόγειο","0").replace(",","").strip())
+                estate['level'] = int(level.strip().replace("ος","").replace("Ισόγειο","0").replace("Ημιυπόγειο","-1").replace(",","").strip())
                 print(estate['level'])
                 estate['bedroom'] = int(bedroom.strip().replace("×","").strip())
                 print(estate['bedroom'])
@@ -156,7 +168,10 @@ def retrieveData(location):
 
 
 def getStatistics(location,level):
-    query_cursor=houses.find({"location":location,"level":0},{"_id":0})
+    if(level==0):
+        query_cursor=houses.find({"location":location,"level":0},{"_id":0})
+    else:
+        query_cursor=houses.find({"location":location,"level":{"$ne" : 0}},{"_id":0})
     list_cur=list(query_cursor)
     df=pd.DataFrame(list_cur)
     print(df)
@@ -166,13 +181,12 @@ def getStatistics(location,level):
     statistics["avg_rooms"]=int(df.bedroom.mean())
     statistics["newest_house"]=int(df.year.max())
     statistics["oldest_house"]=int(df.year.min())
-    
-    print(statistics)
     return statistics
+
     
 def getSelectedHouses(location,level):
     if(level=="ALL"):
-        query_cursor=houses.find({},{"_id":0})
+        query_cursor=houses.find({"location":location},{"_id":0})
         list_cur=list(query_cursor)
         return list_cur
     else:
@@ -183,40 +197,42 @@ def getSelectedHouses(location,level):
 
 #retrieveData("Mesologgi")
 #storeData("Mesologgi")
-getStatistics("Mesologgi",0)
-print(getSelectedHouses("Mesologgi",1))
+#getStatistics("Mesologgi",0)
+#print(getSelectedHouses("Mesologgi",1))
 
 
+#Flask endpoints
+@app.route("/")
+@cross_origin()
+def home():
+    return render_template("index.html")
+
+# endpoint for retrieving selected houses based on location and level
+@app.route("/getSelectedHouses",methods=['GET', 'POST'])
+@cross_origin()
+def getSelectedHousesAPI():
+    if request.method == 'GET':
+        #get the needed arguments (Glucose,BloodPressure,Insulin,BMI,Age)
+        location = request.args.get('location')
+        level = request.args.get('level')
+        #retrieve the data
+        results = getSelectedHouses(location,int(level))
+        return Response(json.dumps(results), status=200, mimetype="application/json")
+    return Response('{"message":"Please try again"}', status=500, mimetype="application/json")
+
+# endpoint for retrieving statistics for houses in selected area
+@app.route("/getStatistics",methods=['GET', 'POST'])
+@cross_origin()
+def getStatisticsAPI():
+    if request.method == 'GET':
+        #get the needed arguments (Glucose,BloodPressure,Insulin,BMI,Age)
+        location = request.args.get('location')
+        level = request.args.get('level')
+        #retrieve the data
+        results = getStatistics(location,int(level))
+        return Response(json.dumps(results), status=200, mimetype="application/json")
+    return Response('{"message":"Please try again"}', status=500, mimetype="application/json")
 
 
-'''
-#list to store properties
-properties=[]  # a list to store quotes
-for counter in range(1,3):
-    URL = "https://www.xe.gr/property/results?transaction_name=buy&item_type=re_residence&geo_place_ids[]="+place+"&page="+str(counter)
-    r = requests.get(URL)
-    soup = BeautifulSoup(r.content, 'html5lib')
-    print(soup.prettify())
-    with open("output1.html", "w",encoding="utf-8") as file:
-        file.write(str(soup.prettify()))
-    table = soup.find('div', attrs = {'class':'results-content grid-x'}).find('div', attrs = {'class':'property-result-list'})
-    print(table)
-    for row in table.findAll('div',
-                         attrs = {'class':'common-property-ad-price'}):
-        estate = {}
-        estate['price'] = row.h3.text
-        
-        estate['url'] = row.a['href']
-        estate['img'] = row.img['src']
-        estate['lines'] = row.img['alt'].split(" #")[0]
-        estate['author'] = row.img['alt'].split(" #")[1]
-        
-        properties.append(estate)
-      
-    filename = 'properties.csv'
-    with open(filename, 'w', newline='') as f:
-        w = csv.DictWriter(f,['theme','url','img','lines','author'])
-        w.writeheader()
-        for house in properties:
-            w.writerow(house)
-'''   
+if __name__ == "__main__":
+    app.run(debug=True, host='0.0.0.0', port=5000)
