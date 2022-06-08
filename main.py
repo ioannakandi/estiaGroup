@@ -25,13 +25,10 @@ houses = db['houses']
 
 def storeData(location):
     if(location=="Trikala"):
-        location = "trikala"
         pages=2
     elif(location=="Mesologgi"):
-        location = "mesologgi"
         pages=3
     elif(location=="Crete"):
-        location = "crete"
         pages=52
     
     print(location)
@@ -49,33 +46,61 @@ def storeData(location):
                 print(price)
                 pricepersqm = soup_1.find('div', attrs = {'class':'common-property-ad-price'}).find('span', attrs = {'class':'property-ad-price-per-sqm'}).text
                 print(pricepersqm)
-                level = soup_1.find('div', attrs = {'class':'common-property-ad-details grid-x'}).find('div', attrs = {'class':'property-ad-level-container'}).find('span', attrs = {'class':'property-ad-level'}).text
+                try:
+                    level = soup_1.find('div', attrs = {'class':'common-property-ad-details grid-x'}).find('div', attrs = {'class':'property-ad-level-container'}).find('span', attrs = {'class':'property-ad-level'}).text
+                except:
+                    level = '0'
                 print(level)
-                if(location=='trikala'):
+                if(location=='Trikala'):
                     try:
                         bedroom = soup_1.find('div', attrs = {'class':'common-property-ad-details grid-x'}).find('div', attrs = {'class':'grid-x property-ad-bedrooms-container'}).find('span').text
-                        print(bedroom)
-                        bathroom = soup_1.find('div', attrs = {'class':'common-property-ad-details grid-x'}).find('div', attrs = {'class':'grid-x property-ad-bathrooms-container'}).find('span').text
-                        print(bathroom)
-                        year = soup_1.find('div', attrs = {'class':'common-property-ad-details grid-x'}).find('div', attrs = {'class':'grid-x property-ad-construction-year-container'}).find('span').text
-                        print(year)
                     except:
                         bedroom = '0'
-                        bathroom = '0'
-                        year = '1990'
-                elif(location=='crete'):
-                    try:
-                        bedroom = soup_1.find('div', attrs = {'class':'common-property-ad-details grid-x'}).find('div', attrs = {'class':'grid-x property-ad-bedrooms-container'}).find('span').text
-                        print(bedroom)
-                        bathroom = soup_1.find('div', attrs = {'class':'common-property-ad-details grid-x'}).find('div', attrs = {'class':'grid-x property-ad-bathrooms-container'}).find('span').text
-                        print(bathroom)
-                        year = soup_1.find('div', attrs = {'class':'common-property-ad-details grid-x'}).find('div', attrs = {'class':'grid-x property-ad-construction-year-container'}).find('span').text
-                        print(year)
-                    except:
-                        bedroom = '0'
-                        bathroom = '0'
-                        year = '1990'
                     
+                    try:
+                        bathroom = soup_1.find('div', attrs = {'class':'common-property-ad-details grid-x'}).find('div', attrs = {'class':'grid-x property-ad-bathrooms-container'}).find('span').text
+                    except:
+                        bathroom = '0'
+                    
+                    try:
+                        year = soup_1.find('div', attrs = {'class':'common-property-ad-details grid-x'}).find('div', attrs = {'class':'grid-x property-ad-construction-year-container'}).find('span').text
+                    except:
+                        year = '1990'
+
+                elif(location=='Crete'):
+                    
+                    try:
+                        bedroom = soup_1.find('div', attrs = {'class':'common-property-ad-details grid-x'}).find('div', attrs = {'class':'grid-x property-ad-bedrooms-container'}).find('span').text
+                    except:
+                        bedroom = '0'
+                    
+                    try:
+                        bathroom = soup_1.find('div', attrs = {'class':'common-property-ad-details grid-x'}).find('div', attrs = {'class':'grid-x property-ad-bathrooms-container'}).find('span').text
+                    except:
+                        bathroom = '0'
+                    
+                    try:
+                        year = soup_1.find('div', attrs = {'class':'common-property-ad-details grid-x'}).find('div', attrs = {'class':'grid-x property-ad-construction-year-container'}).find('span').text
+                    except:
+                        year = '1990'
+                      
+                elif(location=='Mesologgi'):
+                    
+                    try:
+                        bedroom = soup_1.find('div', attrs = {'class':'common-property-ad-details grid-x'}).find('div', attrs = {'class':'grid-x property-ad-bedrooms-container'}).find('span').text
+                    except:
+                        bedroom = '0'
+                    
+                    try:
+                        bathroom = soup_1.find('div', attrs = {'class':'common-property-ad-details grid-x'}).find('div', attrs = {'class':'grid-x property-ad-bathrooms-container'}).find('span').text
+                    except:
+                        bathroom = '0'
+                    
+                    try:
+                        year = soup_1.find('div', attrs = {'class':'common-property-ad-details grid-x'}).find('div', attrs = {'class':'grid-x property-ad-construction-year-container'}).find('span').text
+                    except:
+                        year = '1990'
+                       
                 estate = {}
                 estate['title'] = title.strip()
                 estate['price'] = int(price.strip().replace("€","").replace(".","").strip())
@@ -131,20 +156,19 @@ def retrieveData(location):
 
 
 def getStatistics(location,level):
-    if(level==0):
-        query_cursor=houses.find({"level":0},{"_id":0})
-        list_cur=list(query_cursor)
-        df=pd.DataFrame(list_cur)
-        print(df)
-        statistics={}
-        statistics["avg_price"]=int(df.pricepersqm.mean())
-        statistics["avg_baths"]=int(df.bathroom.mean())
-        statistics["avg_rooms"]=int(df.bedroom.mean())
-        statistics["newest_house"]=int(df.year.max())
-        statistics["oldest_house"]=int(df.year.min())
-        
-        print(statistics)
-        return statistics
+    query_cursor=houses.find({"location":location,"level":0},{"_id":0})
+    list_cur=list(query_cursor)
+    df=pd.DataFrame(list_cur)
+    print(df)
+    statistics={}
+    statistics["avg_price"]=int(df.pricepersqm.mean())
+    statistics["avg_baths"]=int(df.bathroom.mean())
+    statistics["avg_rooms"]=int(df.bedroom.mean())
+    statistics["newest_house"]=int(df.year.max())
+    statistics["oldest_house"]=int(df.year.min())
+    
+    print(statistics)
+    return statistics
     
 def getSelectedHouses(location,level):
     if(level=="ALL"):
@@ -158,7 +182,7 @@ def getSelectedHouses(location,level):
    
 
 #retrieveData("Mesologgi")
-storeData("Crete")
+#storeData("Mesologgi")
 getStatistics("Mesologgi",0)
 print(getSelectedHouses("Mesologgi",1))
 
