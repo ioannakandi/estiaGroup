@@ -34,7 +34,7 @@ app.config.from_object(__name__)
 app.config['SECRET_KEY'] = '7d441f27d441f27567d441f2b6176a'
 CORS(app)
 
-
+#method to store the data retrieved from xe.gr in MongoDB
 def storeData(location):
     if(location=="Trikala"):
         pages=2
@@ -47,8 +47,6 @@ def storeData(location):
     for i in range (1,pages):
         html = open("data/"+location+"/"+location+"_"+str(pages)+".html",encoding="utf-8").read()
         soup = BeautifulSoup(html,features="lxml")
-        #list to store properties
-        properties=[]  # a list to store real estate specss
         try:
             for i in range(0,1000):
                 soup_1 = soup.find_all('div', attrs = {'class':'results-content grid-x'})[0].find('div', attrs = {'class':'cell large-6 tiny-12 results-grid-container'}).find('div', attrs = {'class':'property-results-content'}).find_all('div', attrs = {'class':'property-result-list'})[1].find('div', attrs = {'class':'grid-x'}).find_all('div', attrs = {'class':'cell huge-3 xxxlarge-4 large-6 medium-4 small-6 tiny-12'})[i].find('div', attrs = {'class':'common-property-ad'}).find('div', attrs = {'class':'common-property-ad-body grid-y align-justify'}).find('a')
@@ -130,13 +128,12 @@ def storeData(location):
                 estate['location'] = location
                 print(estate['location'])
                 print(estate)
-                #properties.append(estate)
                 houses.insert_one(estate)
         except:
             pass
 
 
-         
+#method to retrieve the data from xe.gr         
 def retrieveData(location):
     if(location=="Trikala"):  
         place = 'ChIJXy53IjMZWRMRwJ-54iy9AAQ' #Trikala
@@ -194,7 +191,7 @@ def getSelectedHouses(location,level):
         list_cur=list(query_cursor)
         return list_cur
    
-
+#those are just for testing
 #retrieveData("Mesologgi")
 #storeData("Mesologgi")
 #getStatistics("Mesologgi",0)
@@ -202,6 +199,7 @@ def getSelectedHouses(location,level):
 
 
 #Flask endpoints
+#Main endpoint that shows the main page of the app
 @app.route("/")
 @cross_origin()
 def home():
@@ -212,7 +210,7 @@ def home():
 @cross_origin()
 def getSelectedHousesAPI():
     if request.method == 'GET':
-        #get the needed arguments (Glucose,BloodPressure,Insulin,BMI,Age)
+        #get the needed arguments (location and level)
         location = request.args.get('location')
         level = request.args.get('level')
         #retrieve the data
@@ -225,7 +223,7 @@ def getSelectedHousesAPI():
 @cross_origin()
 def getStatisticsAPI():
     if request.method == 'GET':
-        #get the needed arguments (Glucose,BloodPressure,Insulin,BMI,Age)
+        #get the needed arguments (location and level)
         location = request.args.get('location')
         level = request.args.get('level')
         #retrieve the data
