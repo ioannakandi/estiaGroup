@@ -186,8 +186,12 @@ def getSelectedHouses(location,level):
         query_cursor=houses.find({"location":location},{"_id":0})
         list_cur=list(query_cursor)
         return list_cur
+    elif(level=="Apartment"):
+        query_cursor=houses.find({"location":location,"level":{"$ne" : 0}},{"_id":0})
+        list_cur=list(query_cursor)
+        return list_cur
     else:
-        query_cursor=houses.find({"level":level,"location":location},{"_id":0})
+        query_cursor=houses.find({"location":location,"level":0},{"_id":0})
         list_cur=list(query_cursor)
         return list_cur
    
@@ -214,7 +218,7 @@ def getSelectedHousesAPI():
         location = request.args.get('location')
         level = request.args.get('level')
         #retrieve the data
-        results = getSelectedHouses(location,int(level))
+        results = getSelectedHouses(location,level)
         return Response(json.dumps(results), status=200, mimetype="application/json")
     return Response('{"message":"Please try again"}', status=500, mimetype="application/json")
 

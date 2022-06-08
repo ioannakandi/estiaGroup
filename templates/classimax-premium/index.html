@@ -95,20 +95,20 @@
 						<div class="container">
 							<div class="row justify-content-center">
 								<div class="col-lg-12 col-md-12 align-content-center">
-										<form>
+										<form id="deals">
 											<div class="form-row">
 												<div class="form-group col-md-5">
 													<select input type="text" class="w-100 form-control mt-lg-1 mt-md-2"  id="category" placeholder="category">
-														<option value="1">Apartments</option>
-														<option value="2">Houses</option>
-														<option value="3">Show all</option>
+														<option value="Apartment">Apartments</option>
+														<option value="House">Houses</option>
+														<option value="ALL">Show all</option>
 													</select>
 												</div>
 												<div class="form-group col-md-5">
-													<select input type="text" class="w-100 form-control mt-lg-1 mt-md-2" id="inputLocation4" placeholder="location">
-                            <option value="1">Trikala</option>
-                            <option value="2">Mesologgi</option>
-                            <option value="3">Crete</option>
+													<select input type="text" class="w-100 form-control mt-lg-1 mt-md-2" id="location" placeholder="location">
+                            <option value="Trikala">Trikala</option>
+                            <option value="Mesologgi">Mesologgi</option>
+                            <option value="Crete">Crete</option>
                           </select>
 												</div>
 												<div class="form-group col-md-2 align-self-center">
@@ -377,6 +377,174 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU&libraries=places"></script>
 <script src="plugins/google-map/gmap.js"></script>
 <script src="js/script.js"></script>
+
+<script>
+	$(document).ready(function() {
+        //make the request to the back-end (it's a GET request, just like anything else we will use)
+          $.get(
+            "http://localhost:5000/getStatistics",
+            {
+              location: "Trikala",
+			  level: 27
+            })
+            .done(function (response) {
+              console.log(response);
+			document.getElementById("1").textContent=response.avg_price;
+			document.getElementById("2").textContent=response.avg_baths;
+			document.getElementById("3").textContent=response.avg_rooms;
+			document.getElementById("4").textContent=response.newest_house;
+			document.getElementById("5").textContent=response.oldest_house;
+            })
+            .fail(function (response) {
+              //if the response status is 500 (meaning that something is wrong), the following will be executed
+              //it just shows an alert with the response from the back-end
+              window.alert(response.message);
+            });
+
+			$.get(
+            "http://localhost:5000/getStatistics",
+            {
+              location: "Mesologgi",
+			  level: 27
+            })
+            .done(function (response) {
+              console.log(response);
+			document.getElementById("6").textContent=response.avg_price;
+			document.getElementById("7").textContent=response.avg_baths;
+			document.getElementById("8").textContent=response.avg_rooms;
+			document.getElementById("9").textContent=response.newest_house;
+			document.getElementById("10").textContent=response.oldest_house;
+            })
+            .fail(function (response) {
+              //if the response status is 500 (meaning that something is wrong), the following will be executed
+              //it just shows an alert with the response from the back-end
+              window.alert(response.message);
+            });
+
+			$.get(
+            "http://localhost:5000/getStatistics",
+            {
+              location: "Crete",
+			  level: 27
+            })
+            .done(function (response) {
+              console.log(response);
+			document.getElementById("11").textContent=response.avg_price;
+			document.getElementById("12").textContent=response.avg_baths;
+			document.getElementById("13").textContent=response.avg_rooms;
+			document.getElementById("14").textContent=response.newest_house;
+			document.getElementById("15").textContent=response.oldest_house;
+            })
+            .fail(function (response) {
+              //if the response status is 500 (meaning that something is wrong), the following will be executed
+              //it just shows an alert with the response from the back-end
+              window.alert(response.message);
+            });
+
+			$.get(
+            "http://localhost:5000/getStatistics",
+            {
+              location: "Trikala",
+			  level: 0
+            })
+            .done(function (response) {
+              console.log(response);
+			document.getElementById("16").textContent=response.avg_price;
+			document.getElementById("17").textContent=response.avg_baths;
+			document.getElementById("18").textContent=response.avg_rooms;
+			document.getElementById("19").textContent=response.newest_house;
+			document.getElementById("20").textContent=response.oldest_house;
+            })
+            .fail(function (response) {
+              //if the response status is 500 (meaning that something is wrong), the following will be executed
+              //it just shows an alert with the response from the back-end
+              window.alert(response.message);
+            });
+
+			$.get(
+            "http://localhost:5000/getStatistics",
+            {
+              location: "Mesologgi",
+			  level: 0
+            })
+            .done(function (response) {
+              console.log(response);
+			document.getElementById("21").textContent=response.avg_price;
+			document.getElementById("22").textContent=response.avg_baths;
+			document.getElementById("23").textContent=response.avg_rooms;
+			document.getElementById("24").textContent=response.newest_house;
+			document.getElementById("25").textContent=response.oldest_house;
+            })
+            .fail(function (response) {
+              //if the response status is 500 (meaning that something is wrong), the following will be executed
+              //it just shows an alert with the response from the back-end
+              window.alert(response.message);
+            });
+
+			$.get(
+            "http://localhost:5000/getStatistics",
+            {
+              location: "Crete",
+			  level: 0
+            })
+            .done(function (response) {
+              console.log(response);
+			document.getElementById("26").textContent=response.avg_price;
+			document.getElementById("27").textContent=response.avg_baths;
+			document.getElementById("28").textContent=response.avg_rooms;
+			document.getElementById("29").textContent=response.newest_house;
+			document.getElementById("30").textContent=response.oldest_house;
+            })
+            .fail(function (response) {
+              //if the response status is 500 (meaning that something is wrong), the following will be executed
+              //it just shows an alert with the response from the back-end
+              window.alert(response.message);
+            });
+
+    });
+
+	//get houses based on location
+    $("#deals").submit(function(e) {
+      //prevent Default functionality
+      e.preventDefault();
+      //get the fields of the form based on the id
+      let level = $("#category").val();
+      let location = $("#location").val();
+      //make the request to the back-end (it's a GET request, just like anything else we will use)
+        $.get(
+          "http://localhost:5000/getSelectedHouses",
+          {
+            location:location,
+            level:level,
+          })
+          .done(function (response) {
+			  console.log(response)
+            for (var house of response)
+             {
+                 //fill in the patients table
+                 var markup = `<tr>
+                 <td class="align-middle">${house.title}</td>
+                 <td class="align-middle">${house.price}</td>
+                 <td class="align-middle">${house.pricepersqm}</td>
+                 <td class="align-middle">${house.level}</td>
+				 <td class="align-middle">${house.bedroom}</td>
+                 <td class="align-middle">${house.bathroom}</td>
+				 <td class="align-middle">${house.year}</td>
+                 </tr>`;
+                 $("#deals tbody").append(markup);
+
+             }
+
+          })
+          .fail(function (response) {
+            //if the response status is 500 (meaning that something is wrong), the following will be executed
+            //it just shows an alert with the response from the back-end
+            window.alert(response.message);
+          });
+});
+
+
+</script>
 
 </body>
 
